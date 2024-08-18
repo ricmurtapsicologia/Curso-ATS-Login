@@ -158,7 +158,7 @@
 
 <script>
     // Lista de matrículas válidas
-    const matriculasValidas = ["1234", "5678", "91011", "1213"]; // Adicione todas as matrículas válidas aqui
+   const matriculasValidas = ["1368646, 1359843, 1430750, 1605971, 1603687, 1613892, 1674993, 1075795, 1363845, 1550375, 1480128, 1479278, 1554559, 1525120, 1245661, 1549880, 1479088, 1524776, 1644525, 1788868, terapiadoesquema"]; // Adicione todas as matrículas válidas aqui
 
     function verificarMatricula() {
         const matricula = document.getElementById("matricula").value;
