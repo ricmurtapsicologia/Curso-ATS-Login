@@ -1,3 +1,4 @@
+/* Estilos Globais */
 body {
     font-family: Arial, sans-serif;
     background: url('https://i.pinimg.com/originals/38/70/c5/3870c5a678e72a0c16ca58914e14df3f.jpg') no-repeat center center fixed;
@@ -13,6 +14,7 @@ body {
     flex-direction: column;
 }
 
+/* Cabeçalho */
 header {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
@@ -33,6 +35,7 @@ header h2 {
     color: #FFF;
 }
 
+/* Container de Login */
 .login-container {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 30px;
@@ -63,6 +66,7 @@ header h2 {
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
+    transition: background 0.3s ease;
 }
 
 .login-container button:hover {
@@ -76,6 +80,7 @@ header h2 {
     display: none;
 }
 
+/* Rodapé */
 footer {
     margin-top: 20px;
     background: rgba(0, 0, 0, 0.7);
@@ -85,27 +90,28 @@ footer {
     color: #fff;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
     .login-container {
-        width: 90%;
-        padding: 20px;
+        max-width: 400px; /* Mesmo limite para mobile e desktop */
+        padding: 30px; /* Consistência com o desktop */
     }
 
     header h1 {
-        font-size: 1.8em;
+        font-size: 2.5em; /* Igual ao desktop */
     }
 
     header h2 {
-        font-size: 1em;
+        font-size: 1.2em; /* Igual ao desktop */
     }
 
     .login-container input,
     .login-container button {
-        width: 90%;
-        padding: 10px;
+        width: 80%; /* Consistência com o desktop */
+        padding: 10px; /* Consistência com o desktop */
     }
 
     footer {
-        padding: 10px;
+        padding: 15px; /* Mesmo padding do desktop */
     }
 }
