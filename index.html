@@ -31,36 +31,77 @@
 	<footer>&copy; 2025 Major BM Richelmy Murta Pinto. Todos os direitos reservados.</footer>
 	<!-- Script JavaScript -->
 	<script>
-		// Lista de matrículas válidas
-		const matriculasValidas = [
-			"1368646", "1359843", "1430750", "1605971", "1603687", "1613892", "1674993", "1075795", "1363845", "1550375",
-			"1480128", "1479278", "1554559", "1525120", "1245661", "1549880", "1479088", "1524776", "1644525", "1788868", 
-			"terapiadoesquema", "5212651", "9104046", "1151258", "12597010", "1725936", "1728815", "1726678", "1728831", 
-			"1726033", "1636315", "1730340", "1729896", "1726157", "1727080", "1729581", "1638535", "1644772", "1645365", 
-			"1728708", "1729953", "1645092", "1638022", "1641349", "1728120", "1729458", "1726066", "1728054", "1639798", 
-			"1727049", "1727361", "1642388", "1727841", "1641000", "1605260", "1730084", "1365303", "1479666", "1311588", 
-			"1637024", "1822410", "1317288", "1644467", "1822899", "1640556", "05631415658", "1655562", "1525096", "1333681", 
-			"1644707", "1821719", "1365584", "1725829", "1635762", "1361757", "1479674", "1554138", "1641323", "1785906", 
-			"1766377", "1525427", "1317809", "7200064", "1722057", "1729334", "1636117", "1554880", "01188250620", "7488890", 
-			"1368687", "1644301", "1821669", "1554914", "1272707", "1317080", "1550615", "294424742", "07360928621", 
-			"professoraadriana", "1824275", "1786110", "1728849", "1727296", "1822418", "1789999", "1725886", "1824226", 
-			"1636364", "1729839", "1824259", "1786847", "1824234", "2428598", "1729961", "1824200", "1725993", "2139499", 
-			"1479666", "2240572", "1821826", "2428636", "1824358", "2414880", "2428547", "1824341", "2428610", "2428557", 
-			"1730126", "2428628", "2242010", "2428709", "2400570", "1824267", "1824242", "1482058", "1480607", "1481555", 
-			"1481506", "1317734", "1528124", "1479435", "1480478", "1530138", "1481775", "1497497", "1361047", "1480367", 
-			"1520653", "1481639", "1481290", "1481504", "1528298", "1480508", "1360270", "1527654", "1727312"
-		];
-		
-		function verificarMatricula() {
-		    const matriculaInput = document.getElementById("matricula").value.trim();
-		    const mensagemErro = document.getElementById("mensagem");
-		
-		    if (matriculasValidas.includes(matriculaInput)) {
-		        window.location.href = "https://ricmurtapsicologia.github.io/Curso-ATS/"; // Redireciona para a página principal
-		    } else {
-		        mensagemErro.style.display = "block"; // Exibe mensagem de erro
-		    }
-		}
+// Lista de matrículas válidas
+const matriculasValidas = [
+    "1368646", "1359843", "1430750", "1605971", "1603687", "1613892", "1674993", "1075795", "1363845", "1550375",
+    "1480128", "1479278", "1554559", "1525120", "1245661", "1549880", "1479088", "1524776", "1644525", "1788868", 
+    "terapiadoesquema", "5212651", "9104046", "1151258", "12597010", "1725936", "1728815", "1726678", "1728831", 
+    "1726033", "1636315", "1730340", "1729896", "1726157", "1727080", "1729581", "1638535", "1644772", "1645365", 
+    "1728708", "1729953", "1645092", "1638022", "1641349", "1728120", "1729458", "1726066", "1728054", "1639798", 
+    "1727049", "1727361", "1642388", "1727841", "1641000", "1605260", "1730084", "1365303", "1479666", "1311588", 
+    "1637024", "1822410", "1317288", "1644467", "1822899", "1640556", "05631415658", "1655562", "1525096", "1333681", 
+    "1644707", "1821719", "1365584", "1725829", "1635762", "1361757", "1479674", "1554138", "1641323", "1785906", 
+    "1766377", "1525427", "1317809", "7200064", "1722057", "1729334", "1636117", "1554880", "01188250620", "7488890", 
+    "1368687", "1644301", "1821669", "1554914", "1272707", "1317080", "1550615", "294424742", "07360928621", 
+    "professoraadriana", "1824275", "1786110", "1728849", "1727296", "1822418", "1789999", "1725886", "1824226", 
+    "1636364", "1729839", "1824259", "1786847", "1824234", "2428598", "1729961", "1824200", "1725993", "2139499", 
+    "1479666", "2240572", "1821826", "2428636", "1824358", "2414880", "2428547", "1824341", "2428610", "2428557", 
+    "1730126", "2428628", "2242010", "2428709", "2400570", "1824267", "1824242", "1482058", "1480607", "1481555", 
+    "1481506", "1317734", "1528124", "1479435", "1480478", "1530138", "1481775", "1497497", "1361047", "1480367", 
+    "1520653", "1481639", "1481290", "1481504", "1528298", "1480508", "1360270", "1527654", "1727312"
+];
+
+// Seletores para os elementos da página
+const matriculaInput = document.getElementById("matricula");
+const mensagemErro = document.getElementById("mensagem");
+const botaoAcessar = document.querySelector("button");
+
+// Função para verificar matrícula
+function verificarMatricula() {
+    const matricula = matriculaInput.value.trim();
+
+    if (matricula === "") {
+        exibirMensagem("Por favor, insira sua matrícula.", "erro");
+        return;
+    }
+
+    if (matriculasValidas.includes(matricula)) {
+        exibirMensagem("Acesso permitido. Redirecionando...", "sucesso");
+        setTimeout(() => {
+            window.location.href = "https://ricmurtapsicologia.github.io/Curso-ATS/";
+        }, 1500); // Redireciona após 1,5 segundos
+    } else {
+        exibirMensagem("Matrícula inválida! Por favor, tente novamente.", "erro");
+    }
+}
+
+// Função para exibir mensagens
+function exibirMensagem(mensagem, tipo) {
+    mensagemErro.textContent = mensagem;
+    mensagemErro.style.display = "block";
+    mensagemErro.style.color = tipo === "sucesso" ? "#28a745" : "#FF6F61";
+}
+
+// Adiciona evento ao botão de acessar
+botaoAcessar.addEventListener("click", verificarMatricula);
+
+// Adiciona evento ao pressionar Enter no campo de entrada
+matriculaInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        verificarMatricula();
+    }
+});
+
+// Scroll suave para âncoras (opcional, caso tenha links internos)
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+        });
+    });
+});
+
 	</script>
 </body>
 
