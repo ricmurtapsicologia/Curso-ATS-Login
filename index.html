@@ -1,178 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Acesso Restrito - Curso de Atendimento a Tentativas de Suicídio</title>
-	<!-- Metatags para SEO e Compartilhamento -->
-	<meta property="og:title" content="Acesso Restrito - Curso de Atendimento a Tentativas de Suicídio/CFO 2024">
-	<meta property="og:description" content="Acesso restrito Curso de Atendimento a Tentativas de Suicídio/CFS 2024">
-	<meta property="og:image" content="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg">
-	<meta property="og:url" content="https://ricmurtapsicologia.github.io/Curso-ATS/">
-	<!-- Estilos CSS -->
-	<style>
-		body {
-		    font-family: Arial, sans-serif;
-		    background: url('https://i.pinimg.com/originals/38/70/c5/3870c5a678e72a0c16ca58914e14df3f.jpg') no-repeat center center fixed;
-		    background-size: cover;
-		    margin: 0;
-		    padding: 0;
-		    display: flex;
-		    justify-content: center;
-		    align-items: center;
-		    height: 100vh;
-		    color: #fff;
-		    text-align: center;
-		    flex-direction: column;
-		}
-		
-		header {
-		    background: rgba(0, 0, 0, 0.7);
-		    padding: 20px;
-		    border-radius: 10px;
-		    margin-bottom: 20px;
-		}
-		
-		header h1 {
-		    font-size: 2.5em;
-		    margin: 0;
-		    color: #FFDD00;
-		    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-		}
-		
-		header h2 {
-		    font-size: 1.2em;
-		    margin: 10px 0;
-		    color: #FFF;
-		}
-		
-		.login-container {
-		    background-color: rgba(0, 0, 0, 0.7);
-		    padding: 30px;
-		    border-radius: 10px;
-		    max-width: 400px;
-		    width: 100%;
-		}
-		
-		.login-container h1 {
-		    margin-bottom: 20px;
-		    font-size: 24px;
-		}
-		
-		.login-container input {
-		    width: 80%;
-		    padding: 10px;
-		    margin: 10px 0;
-		    border: none;
-		    border-radius: 5px;
-		}
-		
-		.login-container button {
-		    padding: 10px 20px;
-		    background-color: #003366;
-		    color: #fff;
-		    border: none;
-		    border-radius: 5px;
-		    cursor: pointer;
-		    font-size: 16px;
-		    margin-top: 10px;
-		}
-		
-		.login-container button:hover {
-		    background-color: #002244;
-		}
-		
-		#mensagem {
-		    color: #FF6F61;
-		    font-size: 14px;
-		    margin-top: 10px;
-		    display: none;
-		}
-		
-		footer {
-		    margin-top: 20px;
-		    background: rgba(0, 0, 0, 0.7);
-		    padding: 15px;
-		    border-radius: 10px;
-		    font-size: 14px;
-		    color: #fff;
-		}
-		
-		@media (max-width: 768px) {
-		    .login-container {
-		        width: 90%;
-		        padding: 20px;
-		    }
-		
-		    header h1 {
-		        font-size: 1.8em;
-		    }
-		
-		    header h2 {
-		        font-size: 1em;
-		    }
-		
-		    .login-container input,
-		    .login-container button {
-		        width: 90%;
-		        padding: 10px;
-		    }
-		
-		    footer {
-		        padding: 10px;
-		    }
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curso de Atendimento a Tentativas de Suicídio - Acesso Restrito">
+    <meta property="og:title" content="Curso ATS - Acesso Restrito">
+    <meta property="og:description" content="Curso de Atendimento a Tentativas de Suicídio/CFS 2025">
+    <meta property="og:image" content="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg">
+    <meta property="og:url" content="https://ricmurtapsicologia.github.io/Curso-ATS/">
+    <title>Curso ATS - Acesso Restrito</title>
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fontes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-	<!-- Cabeçalho -->
-	<header>
-		<h1>Atendimento a Tentativas de Suicídio 2025</h1>
-		<h2>Cursos de Formação — CBMMG</h2>
-	</header>
-	<!-- Conteúdo Principal -->
-	<div class="login-container">
-		<h1>Acesso Restrito</h1>
-		<input type="text" id="matricula" placeholder="Digite sua matrícula">
-		<button onclick="verificarMatricula()">Acessar</button>
-		<p id="mensagem">Matrícula inválida! Por favor, tente novamente.</p>
-	</div>
-	<!-- Rodapé -->
-	<footer>&copy; 2025 Major BM Richelmy Murta Pinto. Todos os direitos reservados.</footer>
-	<!-- Script JavaScript -->
-	<script>
-		// Lista de matrículas válidas
-		const matriculasValidas = [
-		     "1368646", "1359843", "1430750", "1605971", "1603687", "1613892", "1674993", "1075795", "1363845", "1550375",
-				    "1480128", "1479278", "1554559", "1525120", "1245661", "1549880", "1479088", "1524776", "1644525", "1788868", 
-				    "terapiadoesquema", "5212651", "9104046", "1151258", "12597010", "1725936", "1728815", "1726678", "1728831", 
-				    "1726033", "1636315", "1730340", "1729896", "1726157", "1727080", "1729581", "1638535", "1644772", "1645365", 
-				    "1728708", "1729953", "1645092", "1638022", "1641349", "1728120", "1729458", "1726066", "1728054", "1639798", 
-				    "1727049", "1727361", "1642388", "1727841", "1641000", "1605260", "1730084", "1365303", "1479666", "1311588", 
-				    "1637024", "1822410", "1317288", "1644467", "1822899", "1640556", "05631415658", "1655562", "1525096", "1333681", 
-				    "1644707", "1821719", "1365584", "1725829", "1635762", "1361757", "1479674", "1554138", "1641323", "1785906", 
-				    "1766377", "1525427", "1317809", "7200064", "1722057", "1729334", "1636117", "1554880", "01188250620", "7488890", 
-				    "1368687", "1644301", "1821669", "1554914", "1272707", "1317080", "1550615", "294424742", "07360928621", 
-				    "professoraadriana", "1824275", "1786110", "1728849", "1727296", "1822418", "1789999", "1725886", "1824226", 
-				    "1636364", "1729839", "1824259", "1786847", "1824234", "2428598", "1729961", "1824200", "1725993", "2139499", 
-				    "1479666", "2240572", "1821826", "2428636", "1824358", "2414880", "2428547", "1824341", "2428610", "2428557", 
-				    "1730126", "2428628", "2242010", "2428709", "2400570", "1824267", "1824242", "1482058", "1480607", "1481555", "1481506", "1317734", "1528124", "1479435", "1480478", "1530138", "1481775", 
-				    "1497497", "1361047", "1480367", "1520653", "1481639", "1481290", "1481504", "1528298", "1480508", "1360270", "1527654", "1727312"
-		];
-		
-		function verificarMatricula() {
-		    const matriculaInput = document.getElementById("matricula").value.trim();
-		    const mensagemErro = document.getElementById("mensagem");
-		
-		    if (matriculasValidas.includes(matriculaInput)) {
-		        window.location.href = "https://ricmurtapsicologia.github.io/Curso-ATS/"; // Redireciona para a página principal
-		    } else {
-		        mensagemErro.style.display = "block"; // Exibe mensagem de erro
-		    }
-		}
-	</script>
-</body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Curso de Atendimento a Tentativas de Suicídio</h1>
+        <h2>Bem-vindo ao acesso exclusivo de 2025</h2>
+    </header>
 
+    <!-- Conteúdo Principal -->
+    <main>
+        <section id="login" class="login-container">
+            <h1>Acesso Restrito</h1>
+            <p>Insira sua matrícula para continuar:</p>
+            <input type="text" id="matricula" placeholder="Digite sua matrícula">
+            <button onclick="verificarMatricula()">Acessar</button>
+            <p id="mensagem" class="mensagem-erro">Matrícula inválida! Por favor, tente novamente.</p>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Major BM Richelmy Murta Pinto. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript Externo -->
+    <script src="scripts.js"></script>
+</body>
 </html>
+
