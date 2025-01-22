@@ -11,23 +11,31 @@
     <title>Curso ATS - Acesso Restrito</title>
     <!-- CSS Externo -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Fontes Google -->
+    <!-- Fonte do Google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Ícones FontAwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
     <!-- Cabeçalho -->
     <header>
         <h1>Curso de Atendimento a Tentativas de Suicídio</h1>
         <h2>Bem-vindo ao acesso exclusivo de 2025</h2>
     </header>
-
     <!-- Conteúdo Principal -->
     <main>
         <section id="login" class="login-container">
             <h1>Acesso Restrito</h1>
             <p>Insira sua matrícula para continuar:</p>
             <input type="text" id="matricula" placeholder="Digite sua matrícula">
-            <button onclick="verificarMatricula()">Acessar</button>
+            <button onclick="verificarMatricula()">
+                <i class="fas fa-lock"></i> Acessar
+            </button>
             <p id="mensagem" class="mensagem-erro">Matrícula inválida! Por favor, tente novamente.</p>
         </section>
     </main>
@@ -36,9 +44,41 @@
     <footer>
         <p>&copy; 2025 Major BM Richelmy Murta Pinto. Todos os direitos reservados.</p>
     </footer>
+    <!-- JavaScript -->
+    <script>
+        // Preloader: Oculta após o carregamento da página
+        window.addEventListener('load', () => {
+            document.getElementById('preloader').style.display = 'none';
+        });
 
-    <!-- JavaScript Externo -->
-    <script src="scripts.js"></script>
+        // Lista de matrículas válidas
+        const matriculasValidas = [
+            "1368646", "1359843", "1430750", "1605971", "1603687", "1613892"
+            // Continue com sua lista...
+        ];
+
+        // Verificação de Matrícula
+        function verificarMatricula() {
+            const matriculaInput = document.getElementById("matricula").value.trim();
+            const mensagemErro = document.getElementById("mensagem");
+
+            if (matriculasValidas.includes(matriculaInput)) {
+                window.location.href = "https://ricmurtapsicologia.github.io/Curso-ATS/"; // Redireciona para a página principal
+            } else {
+                mensagemErro.style.display = "block"; // Exibe mensagem de erro
+            }
+        }
+
+        // Scroll Suave para Âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
 
