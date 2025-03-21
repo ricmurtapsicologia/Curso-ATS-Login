@@ -2,121 +2,239 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acesso Restrito - Curso de Atendimento a Tentativas de Suicídio</title>
-
-    <!-- Metatags para SEO e Compartilhamento -->
-    <meta name="description" content="Acesso restrito ao Curso de Atendimento a Tentativas de Suicídio - CBMMG">
-    <meta name="keywords" content="curso, suicídio, CBMMG, acesso restrito, formação, saúde mental">
-    <meta name="author" content="Major BM Richelmy Murta Pinto">
-    <meta property="og:title" content="Acesso Restrito - Curso de Atendimento a Tentativas de Suicídio">
-    <meta property="og:description" content="Acesse o Curso de Atendimento a Tentativas de Suicídio do CBMMG.">
-    <meta property="og:image" content="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg">
-    <meta property="og:url" content="https://ricmurtapsicologia.github.io/Curso-ATS/">
-    <meta property="og:type" content="website">
-    <link rel="icon" href="https://ricmurtapsicologia.github.io/favicon.ico" type="image/x-icon">
-
-    <!-- Estilos CSS Externo -->
-    <link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Metatags para SEO e Compartilhamento -->
+	<meta name="description" content="Acesso restrito ao Curso de Atendimento a Tentativas de Suicídio - CBMMG">
+	<meta name="keywords" content="curso, suicídio, CBMMG, acesso restrito, formação, saúde mental">
+	<meta name="author" content="Major BM Richelmy Murta Pinto">
+	<meta property="og:title" content="Acesso Restrito - Curso de Atendimento a Tentativas de Suicídio">
+	<meta property="og:description" content="Acesse o Curso de Atendimento a Tentativas de Suicídio do CBMMG.">
+	<meta property="og:image" content="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg">
+	<meta property="og:url" content="https://ricmurtapsicologia.github.io/Curso-ATS/">
+	<meta property="og:type" content="website">
+	<link rel="icon" href="https://ricmurtapsicologia.github.io/favicon.ico" type="image/x-icon">
+	<title>Atendimento a Tentativas de Suicídio 2025 - CBMMG</title>
+	<!-- CSS Consolidado e Responsivo -->
+	<style>
+		/* Reset e Transições Globais */
+		*, *::before, *::after {
+		  box-sizing: border-box;
+		  transition: all 0.3s ease-in-out;
+		}
+		html {
+		  scroll-behavior: smooth;
+		}
+		/* Estilos Globais */
+		body {
+		  font-family: 'Arial', sans-serif;
+		  background: url('https://i.pinimg.com/originals/38/70/c5/3870c5a678e72a0c16ca58914e14df3f.jpg') no-repeat center center fixed;
+		  background-size: cover;
+		  margin: 0;
+		  padding: 0;
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: center;
+		  align-items: center;
+		  height: 100vh;
+		  color: #fff;
+		  text-align: center;
+		  overflow-x: hidden; /* Evita rolagem lateral */
+		}
+		/* Cabeçalho */
+		header {
+		  background: rgba(0, 0, 0, 0.7);
+		  padding: 20px;
+		  border-radius: 10px;
+		  margin-bottom: 20px;
+		  max-width: 90%;
+		  animation: fadeIn 1.2s ease;
+		}
+		header h1 {
+		  font-size: 2.5em;
+		  margin: 0;
+		  color: #FFDD00;
+		  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+		  animation: slideDown 1s ease;
+		}
+		header h2 {
+		  font-size: 1.2em;
+		  margin: 10px 0;
+		  color: #FFF;
+		  animation: slideDown 1.5s ease;
+		}
+		/* Container de Login */
+		.login-container {
+		  background-color: rgba(0, 0, 0, 0.7);
+		  padding: 30px;
+		  border-radius: 10px;
+		  max-width: 400px;
+		  width: 100%;
+		  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+		  animation: fadeIn 1.5s ease;
+		}
+		.login-container h1 {
+		  margin-bottom: 20px;
+		  font-size: 24px;
+		  color: #FFDD00;
+		}
+		.login-container input {
+		  width: 80%;
+		  padding: 10px;
+		  margin: 10px 0;
+		  border: 2px solid #003366;
+		  border-radius: 5px;
+		  background: #fff;
+		  font-size: 16px;
+		  color: #333;
+		}
+		.login-container input:focus {
+		  outline: none;
+		  border-color: #FFDD00;
+		  box-shadow: 0 0 8px rgba(255, 221, 0, 0.7);
+		}
+		.login-container button {
+		  padding: 10px 20px;
+		  background-color: #003366;
+		  color: #fff;
+		  border: none;
+		  border-radius: 5px;
+		  cursor: pointer;
+		  font-size: 16px;
+		  margin-top: 10px;
+		  width: 80%;
+		  text-transform: uppercase;
+		  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+		}
+		.login-container button:hover {
+		  background-color: #FFDD00;
+		  color: #003366;
+		  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+		}
+		#mensagem {
+		  color: #FF6F61;
+		  font-size: 14px;
+		  margin-top: 10px;
+		  display: none;
+		  animation: fadeIn 0.5s ease;
+		}
+		/* Rodapé */
+		footer {
+		  margin-top: 20px;
+		  background: rgba(0, 0, 0, 0.7);
+		  padding: 15px;
+		  border-radius: 10px;
+		  font-size: 14px;
+		  color: #fff;
+		  text-align: center;
+		  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+		}
+		/* Animações */
+		@keyframes fadeIn {
+		  from { opacity: 0; }
+		  to { opacity: 1; }
+		}
+		@keyframes slideDown {
+		  from { transform: translateY(-20px); opacity: 0; }
+		  to { transform: translateY(0); opacity: 1; }
+		}
+		/* Responsividade */
+		@media (max-width: 768px) {
+		  header h1 {
+		    font-size: 2rem;
+		  }
+		  header h2 {
+		    font-size: 1rem;
+		  }
+		  .login-container {
+		    padding: 20px;
+		  }
+		  footer {
+		    font-size: 12px;
+		    padding: 10px;
+		  }
+		}
+	</style>
+	<!-- Referência para CSS Externo (caso haja ajustes adicionais) -->
+	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Atendimento a Tentativas de Suicídio 2025</h1>
-        <h2>Cursos de Formação — CBMMG</h2>
-    </header>
-
-    <!-- Conteúdo Principal -->
-    <main>
-        <div class="login-container">
-            <h1>Acesso Restrito</h1>
-            <input type="text" id="matricula" placeholder="Digite sua matrícula">
-            <button>Acessar</button>
-            <p id="mensagem" class="mensagem-erro">Matrícula inválida! Por favor, tente novamente.</p>
-        </div>
-    </main>
-
-    <!-- Rodapé -->
-    <footer>
-        &copy; 2025 Major BM Richelmy Murta Pinto. Todos os direitos reservados.
-    </footer>
-
-    <!-- Script JavaScript -->
-    <script>
-        // Lista de matrículas válidas
-        const matriculasValidas = [
-            "1368646", "1359843", "1430750", "1605971", "1603687", "1613892", "1674993", "1075795", "1363845", "1550375",
-            "1480128", "1479278", "1554559", "1525120", "1245661", "1549880", "1479088", "1524776", "1644525", "1788868",
-            "terapiadoesquema", "5212651", "9104046", "1151258", "12597010", "1725936", "1728815", "1726678", "1728831",
-            "1726033", "1636315", "1730340", "1729896", "1726157", "1727080", "1729581", "1638535", "1644772", "1645365",
-            "1728708", "1729953", "1645092", "1638022", "1641349", "1728120", "1729458", "1726066", "1728054", "1639798",
-            "1727049", "1727361", "1642388", "1727841", "1641000", "1605260", "1730084", "1365303", "1479666", "1311588",
-            "1637024", "1822410", "1317288", "1644467", "1822899", "1640556", "05631415658", "1655562", "1525096", "1333681",
-            "1644707", "1821719", "1365584", "1725829", "1635762", "1361757", "1479674", "1554138", "1641323", "1785906",
-            "1766377", "1525427", "1317809", "7200064", "1722057", "1729334", "1636117", "1554880", "01188250620", "7488890",
-            "1368687", "1644301", "1821669", "1554914", "1272707", "1317080", "1550615", "294424742", "07360928621",
-            "professoraadriana", "1824275", "1786110", "1728849", "1727296", "1822418", "1789999", "1725886", "1824226",
-            "1636364", "1729839", "1824259", "1786847", "1824234", "2428598", "1729961", "1824200", "1725993", "2139499",
-            "1479666", "2240572", "1821826", "2428636", "1824358", "2414880", "2428547", "1824341", "2428610", "2428557",
-            "1730126", "2428628", "2242010", "2428709", "2400570", "1824267", "1824242", "1482058", "1480607", "1481555",
-            "1481506", "1317734", "1528124", "1479435", "1480478", "1530138", "1481775", "1497497", "1361047", "1480367",
-            "1520653", "1481639", "1481290", "1481504", "1528298", "1480508", "1360270", "1527654", "1727312"
-        ];
-
-        // Seletores para os elementos da página
-        const matriculaInput = document.getElementById("matricula");
-        const mensagemErro = document.getElementById("mensagem");
-        const botaoAcessar = document.querySelector("button");
-
-        // Função para verificar matrícula
-        function verificarMatricula() {
-            const matricula = matriculaInput.value.trim();
-
-            if (matricula === "") {
-                exibirMensagem("Por favor, insira sua matrícula.", "erro");
-                return;
-            }
-
-            if (matriculasValidas.includes(matricula)) {
-                exibirMensagem("Acesso permitido. Redirecionando...", "sucesso");
-                setTimeout(() => {
-                    window.location.href = "https://ricmurtapsicologia.github.io/Curso-ATS/";
-                }, 1500); // Redireciona após 1,5 segundos
-            } else {
-                exibirMensagem("Matrícula inválida! Por favor, tente novamente.", "erro");
-            }
-        }
-
-        // Função para exibir mensagens
-        function exibirMensagem(mensagem, tipo) {
-            mensagemErro.textContent = mensagem;
-            mensagemErro.style.display = "block";
-            mensagemErro.style.color = tipo === "sucesso" ? "#28a745" : "#FF6F61";
-            mensagemErro.style.animation = "fadeIn 0.5s ease";
-        }
-
-        // Adiciona evento ao botão de acessar
-        botaoAcessar.addEventListener("click", verificarMatricula);
-
-        // Adiciona evento ao pressionar Enter no campo de entrada
-        matriculaInput.addEventListener("keypress", (e) => {
-            if (e.key === "Enter") {
-                verificarMatricula();
-            }
-        });
-
-        // Scroll suave para âncoras (opcional, caso tenha links internos)
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-            anchor.addEventListener("click", function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth",
-                });
-            });
-        });
-    </script>
+	<!-- Cabeçalho -->
+	<header>
+		<h1>Atendimento a Tentativas de Suicídio 2025</h1>
+		<h2>Cursos de Formação — CBMMG</h2>
+	</header>
+	<!-- Conteúdo Principal -->
+	<main>
+		<div class="login-container">
+			<h1>Acesso Restrito</h1>
+			<input type="text" id="matricula" placeholder="Digite sua matrícula">
+			<button>Acessar</button>
+			<p id="mensagem" class="mensagem-erro">Matrícula inválida! Por favor, tente novamente.</p>
+		</div>
+	</main>
+	<!-- Rodapé -->
+	<footer> &copy; 2025 Major BM Richelmy Murta Pinto. Todos os direitos reservados. </footer>
+	<!-- JavaScript Moderno -->
+	<script>
+		// Lista de matrículas válidas
+		const matriculasValidas = [
+		  "1368646", "1359843", "1430750", "1605971", "1603687", "1613892", "1674993", "1075795", "1363845", "1550375",
+		  "1480128", "1479278", "1554559", "1525120", "1245661", "1549880", "1479088", "1524776", "1644525", "1788868",
+		  "terapiadoesquema", "5212651", "9104046", "1151258", "12597010", "1725936", "1728815", "1726678", "1728831",
+		  "1726033", "1636315", "1730340", "1729896", "1726157", "1727080", "1729581", "1638535", "1644772", "1645365",
+		  "1728708", "1729953", "1645092", "1638022", "1641349", "1728120", "1729458", "1726066", "1728054", "1639798",
+		  "1727049", "1727361", "1642388", "1727841", "1641000", "1605260", "1730084", "1365303", "1479666", "1311588",
+		  "1637024", "1822410", "1317288", "1644467", "1822899", "1640556", "05631415658", "1655562", "1525096", "1333681",
+		  "1644707", "1821719", "1365584", "1725829", "1635762", "1361757", "1479674", "1554138", "1641323", "1785906",
+		  "1766377", "1525427", "1317809", "7200064", "1722057", "1729334", "1636117", "1554880", "01188250620", "7488890",
+		  "1368687", "1644301", "1821669", "1554914", "1272707", "1317080", "1550615", "294424742", "07360928621",
+		  "professoraadriana", "1824275", "1786110", "1728849", "1727296", "1822418", "1789999", "1725886", "1824226",
+		  "1636364", "1729839", "1824259", "1786847", "1824234", "2428598", "1729961", "1824200", "1725993", "2139499",
+		  "1479666", "2240572", "1821826", "2428636", "1824358", "2414880", "2428547", "1824341", "2428610", "2428557",
+		  "1730126", "2428628", "2242010", "2428709", "2400570", "1824267", "1824242", "1482058", "1480607", "1481555",
+		  "1481506", "1317734", "1528124", "1479435", "1480478", "1530138", "1481775", "1497497", "1361047", "1480367",
+		  "1520653", "1481639", "1481290", "1481504", "1528298", "1480508", "1360270", "1527654", "1727312"
+		];
+		const matriculaInput = document.getElementById("matricula");
+		const mensagemErro = document.getElementById("mensagem");
+		const botaoAcessar = document.querySelector("button");
+		
+		// Verifica se a matrícula é válida e redireciona ou exibe erro
+		const verificarMatricula = () => {
+		  const matricula = matriculaInput.value.trim();
+		  if (!matricula) {
+		    exibirMensagem("Por favor, insira sua matrícula.", "erro");
+		    return;
+		  }
+		  if (matriculasValidas.includes(matricula)) {
+		    exibirMensagem("Acesso permitido. Redirecionando...", "sucesso");
+		    setTimeout(() => window.location.href = "https://ricmurtapsicologia.github.io/Curso-ATS/", 1500);
+		  } else {
+		    exibirMensagem("Matrícula inválida! Por favor, tente novamente.", "erro");
+		  }
+		};
+		
+		// Exibe a mensagem de erro ou sucesso
+		const exibirMensagem = (mensagem, tipo) => {
+		  mensagemErro.textContent = mensagem;
+		  mensagemErro.style.display = "block";
+		  mensagemErro.style.color = tipo === "sucesso" ? "#28a745" : "#FF6F61";
+		  mensagemErro.style.animation = "fadeIn 0.5s ease";
+		};
+		
+		botaoAcessar.addEventListener("click", verificarMatricula);
+		matriculaInput.addEventListener("keypress", e => e.key === "Enter" && verificarMatricula());
+		
+		// Scroll suave para âncoras, se necessário
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		  anchor.addEventListener("click", function(e) {
+		    e.preventDefault();
+		    document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+		  });
+		});
+	</script>
 </body>
 
 </html>
