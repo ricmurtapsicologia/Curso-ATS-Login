@@ -13,15 +13,13 @@
 	<meta property="og:image" content="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg" />
 	<meta property="og:url" content="https://ricmurtapsicologia.github.io/Curso-ATS/" />
 	<meta property="og:type" content="website" />
-	<!-- Favicon (único, removida duplicata) -->
+	<!-- Favicon (único) -->
 	<link rel="icon" href="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg" type="image/x-icon" />
 	<title>Atendimento a Tentativas de Suicídio 2025 - CBMMG</title>
 	<!-- CSS Consolidado e Responsivo -->
 	<style>
 		/* RESET & BASE (com transições globais) */
-		*,
-		*::before,
-		*::after {
+		*, *::before, *::after {
 		  box-sizing: border-box;
 		  transition: all 0.3s ease-in-out;
 		}
@@ -30,8 +28,7 @@
 		}
 		body {
 		  font-family: 'Arial', sans-serif;
-		  background: url('https://i.pinimg.com/originals/38/70/c5/3870c5a678e72a0c16ca58914e14df3f.jpg')
-		    no-repeat center center fixed;
+		  background: url('https://i.pinimg.com/originals/38/70/c5/3870c5a678e72a0c16ca58914e14df3f.jpg') no-repeat center center fixed;
 		  background-size: cover;
 		  margin: 0;
 		  padding: 0;
@@ -81,6 +78,9 @@
 		  width: 100%;
 		  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 		  animation: fadeIn 1.5s ease;
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
 		}
 		.login-container h1 {
 		  margin-bottom: 20px;
@@ -120,6 +120,7 @@
 		  color: #003366;
 		  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
 		}
+		/* Mensagem de Erro/Feedback */
 		#mensagem {
 		  color: #FF6F61;
 		  font-size: 14px;
@@ -150,12 +151,47 @@
 		  to { transform: translateY(0); opacity: 1; }
 		}
 		
-		/* Responsividade */
+		/* RESPONSIVIDADE - Mobile First */
 		@media (max-width: 768px) {
-		  header h1 { font-size: 2rem; }
-		  header h2 { font-size: 1rem; }
-		  .login-container { padding: 20px; }
-		  footer { font-size: 12px; padding: 10px; }
+		  /* Ajuste do container de login para centralizar e ampliar os inputs */
+		  .login-container {
+		    padding: 20px;
+		  }
+		  .login-container input,
+		  .login-container button {
+		    width: 90%;
+		    margin: 0 auto;
+		  }
+		  header h1 {
+		    font-size: 2rem;
+		  }
+		  header h2 {
+		    font-size: 1rem;
+		  }
+		
+		  /* Footer: layout em duas linhas para mobile */
+		  footer {
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    gap: 5px;
+		  }
+		  footer::before {
+		    content: "© 2025 Major BM Richelmy";
+		    display: block;
+		    font-weight: bold;
+		  }
+		  footer::after {
+		    content: "Todos os direitos reservados.";
+		    display: block;
+		    font-weight: normal;
+		  }
+		}
+		/* RESPONSIVIDADE - Desktop: Mantém o layout padrão do Footer */
+		@media (min-width: 769px) {
+		  footer {
+		    display: block;
+		  }
 		}
 	</style>
 	<!-- Link para CSS Externo (caso haja) -->
@@ -163,7 +199,7 @@
 </head>
 
 <body>
-	<!-- Cabeçalho (com informações importantes e contraste acentuado) -->
+	<!-- Cabeçalho -->
 	<header>
 		<h1>Atendimento a Tentativas de Suicídio 2025</h1>
 		<h2>Cursos de Formação — CBMMG</h2>
@@ -216,7 +252,7 @@
 		const mensagemErro = document.getElementById("mensagem");
 		const botaoAcessar = document.querySelector("button");
 		
-		// Verifica a matrícula e redireciona ou exibe mensagem
+		// Função para verificar a matrícula
 		const verificarMatricula = () => {
 		  const matricula = matriculaInput.value.trim();
 		  if (!matricula) {
@@ -231,7 +267,7 @@
 		  }
 		};
 		
-		// Exibe mensagem com estilos de sucesso ou erro
+		// Função para exibir mensagem com feedback
 		const exibirMensagem = (mensagem, tipo) => {
 		  mensagemErro.textContent = mensagem;
 		  mensagemErro.style.display = "block";
@@ -240,13 +276,13 @@
 		};
 		
 		botaoAcessar.addEventListener("click", verificarMatricula);
-		matriculaInput.addEventListener("keypress", (e) => {
+		matriculaInput.addEventListener("keypress", e => {
 		  if (e.key === "Enter") verificarMatricula();
 		});
 		
 		// Scroll suave para âncoras
 		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-		  anchor.addEventListener("click", (e) => {
+		  anchor.addEventListener("click", e => {
 		    e.preventDefault();
 		    document.querySelector(anchor.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
 		  });
