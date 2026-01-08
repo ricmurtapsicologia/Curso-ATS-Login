@@ -1,203 +1,642 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Metatags para SEO e Compartilhamento -->
-  <meta name="description" content="Acesso restrito ao Curso de Atendimento a Tentativas de Suicídio - CBMMG" />
-  <meta name="keywords" content="curso, suicídio, CBMMG, acesso restrito, formação, saúde mental" />
-  <meta name="author" content="Major BM Richelmy Murta Pinto" />
-  <meta property="og:title" content="Acesso Restrito - Curso de Atendimento a Tentativas de Suicídio" />
-  <meta property="og:description" content="Acesse o Curso de Atendimento a Tentativas de Suicídio do CBMMG." />
-  <meta property="og:image" content="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg" />
-  <meta property="og:url" content="https://ricmurtapsicologia.github.io/Curso-ATS/" />
-  <meta property="og:type" content="website" />
-  <!-- Favicon (único) -->
-  <link rel="icon" href="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg" type="image/x-icon" />
-  <title>Atendimento a Tentativas de Suicídio 2025 - CBMMG</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- CSS Consolidado e Responsivo -->
-  <style>
-    /* RESET & BASE (com transições globais) */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      transition: all 0.3s ease-in-out;
-    }
-    html { scroll-behavior: smooth; }
-    body{
-      font-family:'Arial',sans-serif;
-      background:url('https://i.pinimg.com/originals/38/70/c5/3870c5a678e72a0c16ca58914e14df3f.jpg') no-repeat center center fixed;
-      background-size:cover;
-      margin:0; padding:0;
-      display:flex; flex-direction:column; justify-content:center; align-items:center;
-      height:100vh; color:#fff; text-align:center; overflow-x:hidden;
-    }
-    a{ text-decoration:none; color:inherit; }
+    <!-- SEO / Compartilhamento -->
+    <meta name="description" content="Acesso restrito ao Curso de Atendimento a Tentativas de Suicídio - CBMMG" />
+    <meta name="keywords" content="curso, suicídio, CBMMG, acesso restrito, formação, saúde mental" />
+    <meta name="author" content="Major BM Richelmy Murta Pinto" />
 
-    /* Cabeçalho */
-    header{
-      background:rgba(0,0,0,.7);
-      padding:20px; border-radius:10px; margin-bottom:20px; max-width:90%;
-      animation:fadeIn 1.2s ease;
-    }
-    header h1{
-      font-size:2.5em; margin:0; color:#FFDD00;
-      text-shadow:2px 2px 4px rgba(0,0,0,.8);
-      animation:slideDown 1s ease;
-    }
-    header h2{ font-size:1.2em; margin:10px 0; color:#FFF; animation:slideDown 1.5s ease; }
+    <meta property="og:title" content="Acesso Restrito - Curso de Atendimento a Tentativas de Suicídio" />
+    <meta property="og:description" content="Acesse o Curso de Atendimento a Tentativas de Suicídio do CBMMG." />
+    <meta property="og:image" content="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg" />
+    <meta property="og:url" content="https://ricmurtapsicologia.github.io/Curso-ATS/" />
+    <meta property="og:type" content="website" />
 
-    /* Container de Login */
-    .login-container{
-      background-color:rgba(0,0,0,.7);
-      padding:30px; border-radius:10px; max-width:400px; width:100%;
-      box-shadow:0 4px 10px rgba(0,0,0,.5);
-      animation:fadeIn 1.5s ease;
-      display:flex; flex-direction:column; align-items:center;
-    }
-    .login-container h1{ margin-bottom:20px; font-size:24px; color:#FFDD00; }
-    .login-container input{
-      width:80%; padding:10px; margin:10px 0;
-      border:2px solid #003366; border-radius:5px; background:#fff;
-      font-size:16px; color:#333;
-    }
-    .login-container input:focus{
-      outline:none; border-color:#FFDD00; box-shadow:0 0 8px rgba(255,221,0,.7);
-    }
-    .login-container button{
-      padding:10px 20px; background-color:#003366; color:#fff; border:none; border-radius:5px;
-      cursor:pointer; font-size:16px; margin-top:10px; width:80%; text-transform:uppercase;
-      box-shadow:0 4px 6px rgba(0,0,0,.2);
-    }
-    .login-container button:hover{ background-color:#FFDD00; color:#003366; box-shadow:0 6px 8px rgba(0,0,0,.4); }
+    <link rel="icon" href="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg" type="image/x-icon" />
+    <title>Atendimento a Tentativas de Suicídio 2025 - CBMMG</title>
 
-    /* Mensagem de Erro/Feedback */
-    #mensagem{ color:#FF6F61; font-size:14px; margin-top:10px; display:none; animation:fadeIn .5s ease; }
+    <style>
+        :root {
+            /* Paleta (mantida) */
+            --navy: #003366;
+            --gold: #FFDD00;
+            --white: #FFFFFF;
 
-    /* Rodapé */
-    footer{
-      margin-top:20px; background:rgba(0,0,0,.7); padding:15px; border-radius:10px;
-      font-size:14px; color:#fff; text-align:center; box-shadow:0 -2px 8px rgba(0,0,0,.2);
-    }
+            /* Neutros premium */
+            --ink: #0B1220;
+            --muted: #94A3B8;
 
-    /* Animações */
-    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
-    @keyframes slideDown { from{transform:translateY(-20px); opacity:0} to{transform:translateY(0); opacity:1} }
+            /* Superfícies translúcidas */
+            --glass: rgba(0, 0, 0, .62);
+            --glass-strong: rgba(0, 0, 0, .72);
 
-    /* RESPONSIVIDADE */
-    @media (max-width:768px){
-      .login-container{ padding:20px; }
-      .login-container input,.login-container button{ width:90%; margin:0 auto; }
-      header h1{ font-size:2rem; }
-      header h2{ font-size:1rem; }
-      footer{ display:flex; flex-direction:column; align-items:center; gap:5px; }
-      footer::before{ content:"© 2025 Major BM Richelmy"; display:block; font-weight:bold; }
-      footer::after{ content:"Todos os direitos reservados."; display:block; font-weight:normal; }
-    }
-    @media (min-width:769px){ footer{ display:block; } }
-  </style>
+            /* UI */
+            --radius: 16px;
+            --radius-sm: 12px;
+            --shadow: 0 14px 36px rgba(0, 0, 0, .35);
+            --shadow-soft: 0 10px 24px rgba(0, 0, 0, .28);
+            --stroke: rgba(255, 255, 255, .10);
 
-  <!-- Link para CSS Externo (caso haja) -->
-  <link rel="stylesheet" href="styles.css" />
+            /* Espaçamento */
+            --pad: clamp(16px, 4vw, 28px);
+            --gap: 14px;
+
+            /* Tipografia */
+            --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+
+        /* Base */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            margin: 0;
+            font-family: var(--font);
+            color: var(--white);
+            background:
+                linear-gradient(180deg, rgba(0, 0, 0, .62) 0%, rgba(0, 0, 0, .72) 55%, rgba(0, 0, 0, .80) 100%),
+                url("https://i.pinimg.com/originals/38/70/c5/3870c5a678e72a0c16ca58914e14df3f.jpg") center/cover no-repeat fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(14px, 3vw, 28px);
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        :focus-visible {
+            outline: 3px solid rgba(255, 221, 0, .65);
+            outline-offset: 2px;
+            border-radius: 10px;
+        }
+
+        /* Acessibilidade */
+        .sr-only {
+            position: absolute !important;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Container principal (simétrico) */
+        .app {
+            width: min(920px, 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+
+        /* Topo */
+        .top {
+            width: 100%;
+            text-align: center;
+            padding: 18px 18px 6px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, .35);
+            border: 1px solid var(--stroke);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, .18);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+
+        .brand svg {
+            width: 18px;
+            height: 18px;
+            flex: 0 0 auto;
+        }
+
+        .brand .tag {
+            font-size: 12.5px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .88);
+        }
+
+        h1 {
+            margin: 14px 0 6px;
+            font-size: clamp(22px, 3.2vw, 34px);
+            line-height: 1.15;
+            letter-spacing: -.02em;
+            color: var(--gold);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: clamp(14px, 1.7vw, 16px);
+            line-height: 1.5;
+            color: rgba(255, 255, 255, .92);
+        }
+
+        /* Card */
+        .card {
+            width: min(520px, 100%);
+            background: var(--glass);
+            border: 1px solid var(--stroke);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: var(--pad);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .card-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+            text-align: center;
+        }
+
+        .logo-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            background: rgba(0, 0, 0, .22);
+            border: 1px solid rgba(255, 255, 255, .08);
+            width: 100%;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, .14);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, .20);
+            object-fit: cover;
+            background: rgba(0, 0, 0, .25);
+            flex: 0 0 auto;
+        }
+
+        .card-title {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: .01em;
+        }
+
+        .card-note {
+            margin: 0;
+            font-size: 13px;
+            color: rgba(255, 255, 255, .80);
+        }
+
+        /* Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        label {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .92);
+            text-align: left;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: left;
+        }
+
+        .input {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255, 255, 255, .14);
+            background: rgba(255, 255, 255, .96);
+            color: var(--ink);
+            font-size: 16px;
+            line-height: 1.2;
+            outline: none;
+            box-shadow: 0 10px 18px rgba(0, 0, 0, .12);
+        }
+
+        .input::placeholder {
+            color: rgba(15, 23, 42, .55);
+        }
+
+        .input:focus {
+            border-color: rgba(255, 221, 0, .65);
+            box-shadow: 0 0 0 4px rgba(255, 221, 0, .18), 0 12px 22px rgba(0, 0, 0, .14);
+        }
+
+        .help {
+            font-size: 12.5px;
+            color: rgba(255, 255, 255, .74);
+            margin: 0;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: linear-gradient(180deg, rgba(0, 51, 102, 1) 0%, rgba(0, 35, 70, 1) 100%);
+            color: var(--white);
+            font-weight: 800;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: var(--shadow-soft);
+            transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+        }
+
+        .btn:hover {
+            filter: brightness(1.06);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .btn:disabled {
+            cursor: not-allowed;
+            opacity: .62;
+            filter: grayscale(.2);
+            box-shadow: none;
+        }
+
+        /* Feedback */
+        .msg {
+            display: none;
+            padding: 10px 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, .10);
+            background: var(--glass-strong);
+            color: rgba(255, 255, 255, .92);
+            font-size: 13.5px;
+            line-height: 1.4;
+        }
+
+        .msg[data-tone="error"] {
+            border-color: rgba(255, 111, 97, .35);
+            box-shadow: 0 0 0 3px rgba(255, 111, 97, .10);
+        }
+
+        .msg[data-tone="success"] {
+            border-color: rgba(40, 167, 69, .35);
+            box-shadow: 0 0 0 3px rgba(40, 167, 69, .10);
+        }
+
+        .msg .row {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            flex: 0 0 auto;
+            margin-top: 1px;
+        }
+
+        /* Rodapé (simétrico e centralizado) */
+        footer {
+            width: 100%;
+            text-align: center;
+            color: rgba(255, 255, 255, .78);
+            font-size: 12.5px;
+            padding: 8px 10px;
+        }
+
+        footer .foot {
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, .34);
+            border: 1px solid var(--stroke);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+
+        /* Microajustes mobile */
+        @media (max-width: 420px) {
+            .logo-row {
+                padding: 10px;
+            }
+
+            .logo {
+                width: 36px;
+                height: 36px;
+            }
+
+            .card {
+                padding: 18px;
+            }
+        }
+
+        /* Respeitar preferências do usuário */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                scroll-behavior: auto !important;
+                transition: none !important;
+                animation: none !important;
+            }
+
+            .btn {
+                transition: none !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <!-- Cabeçalho -->
-  <header>
-    <h1>Atendimento a Tentativas de Suicídio 2025</h1>
-    <h2>Cursos de Formação — CBMMG</h2>
-  </header>
+    <div class="app">
+        <header class="top" role="banner">
+            <div class="brand" aria-label="Identificação institucional">
+                <!-- Ícone simples inline (mantém paleta) -->
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="var(--gold)" d="M12 2l2.2 6.8H21l-5.5 4 2.1 6.7L12 15.7 6.4 19.5 8.5 12.8 3 8.8h6.8z" />
+                </svg>
+                <span class="tag">CBMMG • Conteúdo Institucional</span>
+            </div>
 
-  <!-- Conteúdo Principal com formulário de login -->
-  <main role="main">
-    <section class="login-container" aria-labelledby="login-title">
-      <h1 id="login-title">Acesso Restrito</h1>
-      <label for="matricula" class="visually-hidden">Matrícula</label>
-      <input type="text" id="matricula" placeholder="Digite sua matrícula" aria-required="true" />
-      <button type="button">Acessar</button>
-      <p id="mensagem" role="alert">Matrícula inválida! Por favor, tente novamente.</p>
-    </section>
-  </main>
+            <h1>Atendimento a Tentativas de Suicídio – CBMMG</h1>
+            <p class="subtitle">Acesso restrito ao conteúdo institucional</p>
+        </header>
 
-  <!-- Rodapé -->
-  <footer>&copy; 2026 Major BM Richelmy Murta Pinto. Todos os direitos reservados.</footer>
+        <main class="card" role="main" aria-labelledby="login-title">
+            <div class="card-header">
+                <div class="logo-row">
+                    <img class="logo" src="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg" alt="Logomarca institucional" loading="lazy" decoding="async" />
+                    <div style="text-align:left; width:100%;">
+                        <p class="card-title" id="login-title">Acesso Restrito</p>
+                        <p class="card-note">Somente militares autorizados.</p>
+                    </div>
+                </div>
+            </div>
 
-  // Lista de matrículas válidas
-const matriculasValidas = [
-  "1703963", "1704244", "1704669", "1704685", "1704871", "1704880", "1704889",
-  "1704897", "1704901", "1704905", "1704912", "1704920", "1704938", "1704946",
-  "1704954", "1704962", "1704970", "1704989", "1704997", "1705001", "1705016",
-  "1705024", "1705032", "1705040", "1705059", "1705067", "1705075", "1705083",
-  "1705091", "1705105", "1705113", "1705121", "1705130", "1705148", "1705156",
-  "1705164", "1705172", "1705180", "1705199", "1705202", "1705210", "1705229",
-  "1705237", "1705245", "1705253", "1705261", "1705270", "1705288", "1705296",
-  "1705300", "1705318", "1705326", "1705334", "1705342", "1705350", "1705369",
-  "1705377", "1705385", "1705393", "1705407", "1705415", "1705423", "1705431",
-  "1705440", "1705458", "1705466", "1705474", "1705482", "1705490", "1705504",
-  "1705512", "1705520", "1705539", "1705547", "1705555", "1705563", "1705571",
-  "1705580", "1705598", "1705601", "1705610", "1705628", "1705636", "1705644",
-  "1705652", "1705660", "1705679", "1705687", "1705695", "1705709", "1705717",
-  "1705725", "1705733", "1705741", "1705750", "1705768", "1705776", "1705784",
-  "1705792", "1705806", "1705814", "1705822", "1705830", "1705849", "1705857",
-  "1705865", "1705873", "1705881", "1705890", "1705903", "1705911", "1705920",
-  "1705938", "1705946", "1705954", "1705962", "1705970", "1705989", "1705997",
-  "1706001", "1706010", "1706028", "1706036", "1706044", "1706052", "1706060",
-  "1706079", "1706087", "1706095", "1706109", "1706117", "1706125", "1706133",
-  "1706141", "1706150", "1706168", "1706176", "1706184", "1706192", "1706206",
-  "1706214", "1706222", "1706230", "1706249", "1706257", "1706265", "1706273",
-  "1706281", "1706290", "1706303", "1706311", "1706320", "1706338", "1706346",
-  "1706354", "1706362", "1706371", "1706389", "1706397", "1706401", "1706410",
-  "1706428", "1706436", "1706444", "1706452", "1706460", "1706479", "1706487",
-  "1706495", "1706509", "1706517", "1706525", "1706533", "1706541", "1706550",
-  "1706568", "1706576", "1706584", "1706592", "1706606", "1706614", "1706622",
-  "1706630", "1706649", "1706657", "1706665", "1706673", "1706681", "1706690",
-  "1785864", "1821552", "1728039", "1839760", "1821768", "1728195", "1787134",
-  "1839679", "1839687", "1839752", "1839778",
-  "1726645", "1787506", "1730290", "1839745", "1839711", "1793215",
-  "1822949", "1786672", "1795483", "1787290", "1795038",
-  "1550102", "1479476", "1549138", "1528819", "1481928",
-  "1551241", "1555119", "1525534", "1554880", "1323351",
-  "1529395", "1551829", "1481035", "1479930", "1548650",
-  "1551209", "1525476", "1524834", "1481258", "1361484"
-];
-    const matriculaInput = document.getElementById("matricula");
-    const mensagemErro = document.getElementById("mensagem");
-    const botaoAcessar = document.querySelector("button");
+            <form id="loginForm" novalidate>
+                <div class="field">
+                    <label for="matricula">Matrícula (7 dígitos)</label>
+                    <input class="input" type="text" id="matricula" inputmode="numeric" autocomplete="one-time-code" placeholder="Ex.: 1703963" aria-describedby="helpText" aria-required="true" maxlength="7" />
+                    <p class="help" id="helpText">Digite apenas números. O acesso é validado localmente neste dispositivo.</p>
+                </div>
 
-    // Função para verificar a matrícula
-    const verificarMatricula = () => {
-      const matricula = matriculaInput.value.trim();
-      if (!matricula) {
-        exibirMensagem("Por favor, insira sua matrícula.", "erro");
-        return;
-      }
-      if (matriculasValidas.includes(matricula)) {
-        exibirMensagem("Acesso permitido. Redirecionando...", "sucesso");
-        setTimeout(() => (window.location.href = "https://ricmurtapsicologia.github.io/Curso-ATS/"), 1500);
-      } else {
-        exibirMensagem("Matrícula inválida! Por favor, tente novamente.", "erro");
-      }
-    };
+                <button class="btn" id="btnAcessar" type="submit">Acessar</button>
 
-    // Função para exibir mensagem com feedback
-    const exibirMensagem = (mensagem, tipo) => {
-      mensagemErro.textContent = mensagem;
-      mensagemErro.style.display = "block";
-      mensagemErro.style.color = tipo === "sucesso" ? "#28a745" : "#FF6F61";
-      mensagemErro.style.animation = "fadeIn 0.5s ease";
-    };
+                <div class="msg" id="mensagem" role="status" aria-live="polite" aria-atomic="true">
+                    <div class="row">
+                        <svg class="icon" id="msgIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 14h-2v-2h2v2zm0-4h-2V6h2v6z" />
+                        </svg>
+                        <span id="msgText">Mensagem</span>
+                    </div>
+                </div>
+            </form>
+        </main>
 
-    botaoAcessar.addEventListener("click", verificarMatricula);
-    matriculaInput.addEventListener("keypress", e => {
-      if (e.key === "Enter") verificarMatricula();
-    });
+        <footer>
+            <div class="foot">© 2026 Major BM Richelmy Murta Pinto. Todos os direitos reservados.</div>
+        </footer>
+    </div>
 
-    // Scroll suave para âncoras
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", e => {
-        e.preventDefault();
-        document.querySelector(anchor.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
-      });
-    });
-  </script>
+    <script>
+        (function() {
+            "use strict";
+
+            // Observação: validação client-side não é segurança. Os controles abaixo são apenas anti-abuso básico.
+            const DESTINO = "https://ricmurtapsicologia.github.io/Curso-ATS/"; // conservar link de acesso à página principal
+
+            const elForm = document.getElementById("loginForm");
+            const elInput = document.getElementById("matricula");
+            const elBtn = document.getElementById("btnAcessar");
+            const elMsg = document.getElementById("mensagem");
+            const elMsgText = document.getElementById("msgText");
+            const elMsgIcon = document.getElementById("msgIcon");
+
+            // ====== Matrículas (conservar) ======
+            // Ofuscação leve para reduzir scraping trivial (não é segurança)
+            const _raw = [
+                "1368646", "1359843", "1430750", "1605971", "1603687", "1613892", "1674993", "1075795", "1363845", "1550375",
+                "1480128", "1479278", "1554559", "1525120", "1245661", "1549880", "1479088", "1524776", "1644525", "1788868",
+                "terapiadoesquema", "5212651", "9104046", "1151258", "12597010", "1725936", "1728815", "1726678", "1728831",
+                "1726033", "1636315", "1730340", "1729896", "1726157", "1727080", "1729581", "1638535", "1644772", "1645365",
+                "1728708", "1729953", "1645092", "1638022", "1641349", "1728120", "1729458", "1726066", "1728054", "1639798",
+                "1727049", "1727361", "1642388", "1727841", "1641000", "1605260", "1730084", "1365303", "1479666", "1311588",
+                "1637024", "1822410", "1317288", "1644467", "1822899", "1640556", "05631415658", "1655562", "1525096", "1333681",
+                "1644707", "1821719", "1365584", "1725829", "1635762", "1361757", "1479674", "1554138", "1641323", "1785906",
+                "1766377", "1525427", "1317809", "7200064", "1722057", "1729334", "1636117", "1554880", "01188250620", "7488890",
+                "1368687", "1644301", "1821669", "1554914", "1272707", "1317080", "1550615", "294424742", "07360928621",
+                "professoraadriana", "1824275", "1786110", "1728849", "1727296", "1822418", "1789999", "1725886", "1824226",
+                "1636364", "1729839", "1824259", "1786847", "1824234", "2428598", "1729961", "1824200", "1725993", "2139499",
+                "1479666", "2240572", "1821826", "2428636", "1824358", "2414880", "2428547", "1824341", "2428610", "2428557",
+                "1730126", "2428628", "2242010", "2428709", "2400570", "1824267", "1824242", "1482058", "1480607", "1481555",
+                "1481506", "1317734", "1528124", "1479435", "1480478", "1530138", "1481775", "1497497", "1361047", "1480367",
+                "1520653", "1481639", "1481290", "1481504", "1528298", "1480508", "1360270", "63198428149", "1527654", "1727312",
+                "1550102", "1479476", "1549138", "1528819", "1481928", "1551241", "1555119", "1525534", "1554880", "1323351",
+                "1529395", "1551829", "1481035", "1479930", "1548650", "1551209", "1525476", "1524834", "1481258", "1361484"
+
+            ];
+
+            // Transformação leve: inverte strings e reconstrói em runtime (anti-cópia trivial)
+            const encoded = _raw.map(s => s.split("").reverse().join(""));
+            const matriculasSet = new Set(encoded.map(s => s.split("").reverse().join("")));
+
+            // ====== Rate-limit / Cooldown ======
+            const STORAGE_KEY = "ats_login_attempts_v1";
+            const MAX_TENTATIVAS = 5;
+            const COOLDOWN_MS = 30_000;
+
+            function now() {
+                return Date.now();
+            }
+
+            function loadState() {
+                try {
+                    const raw = localStorage.getItem(STORAGE_KEY);
+                    if (!raw) return {
+                        count: 0,
+                        lockedUntil: 0
+                    };
+                    const parsed = JSON.parse(raw);
+                    return {
+                        count: Number(parsed.count || 0),
+                        lockedUntil: Number(parsed.lockedUntil || 0)
+                    };
+                } catch {
+                    return {
+                        count: 0,
+                        lockedUntil: 0
+                    };
+                }
+            }
+
+            function saveState(state) {
+                try {
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+                } catch {}
+            }
+
+            function setLocked(msFromNow) {
+                const state = loadState();
+                state.lockedUntil = now() + msFromNow;
+                state.count = 0;
+                saveState(state);
+                syncLockUI();
+            }
+
+            function syncLockUI() {
+                const state = loadState();
+                const remaining = state.lockedUntil - now();
+                const locked = remaining > 0;
+
+                elBtn.disabled = locked;
+                elInput.disabled = locked;
+
+                if (locked) {
+                    const secs = Math.ceil(remaining / 1000);
+                    showMessage(`Muitas tentativas. Aguarde ${secs}s e tente novamente.`, "error");
+                }
+            }
+
+            // ====== UI Mensagens ======
+            function showMessage(text, tone) {
+                elMsg.style.display = "block";
+                elMsg.dataset.tone = tone;
+
+                elMsgText.textContent = text;
+
+                // Ícone muda sutilmente pelo tom
+                if (tone === "success") {
+                    elMsgIcon.innerHTML = '<path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 14-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7z"/>';
+                } else {
+                    elMsgIcon.innerHTML = '<path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 14h-2v-2h2v2zm0-4h-2V6h2v6z"/>';
+                }
+            }
+
+            function hideMessage() {
+                elMsg.style.display = "none";
+                elMsg.removeAttribute("data-tone");
+            }
+
+            // ====== Normalização de input ======
+            function normalizeMatricula(value) {
+                const digitsOnly = (value || "").replace(/\D+/g, "").slice(0, 7);
+                return digitsOnly;
+            }
+
+            // Enforce digits while typing (mobile-friendly)
+            elInput.addEventListener("input", () => {
+                const normalized = normalizeMatricula(elInput.value);
+                if (elInput.value !== normalized) elInput.value = normalized;
+                hideMessage();
+            });
+
+            // ====== Verificação ======
+            function verify() {
+                syncLockUI();
+                const state = loadState();
+                if (state.lockedUntil > now()) return;
+
+                const matricula = normalizeMatricula(elInput.value).trim();
+
+                if (!matricula) {
+                    showMessage("Informe sua matrícula para continuar.", "error");
+                    elInput.focus();
+                    return;
+                }
+
+                if (matricula.length !== 7) {
+                    showMessage("Matrícula incompleta. Informe 7 dígitos.", "error");
+                    elInput.focus();
+                    return;
+                }
+
+                const ok = matriculasSet.has(matricula);
+
+                if (ok) {
+                    showMessage("Acesso autorizado. Redirecionando…", "success");
+                    try {
+                        saveState({
+                            count: 0,
+                            lockedUntil: 0
+                        });
+                    } catch {}
+                    setTimeout(() => {
+                        window.location.href = DESTINO;
+                    }, 700);
+                    return;
+                }
+
+                // Erro: contabiliza tentativa
+                state.count += 1;
+                saveState(state);
+
+                if (state.count >= MAX_TENTATIVAS) {
+                    setLocked(COOLDOWN_MS);
+                    return;
+                }
+
+                const left = MAX_TENTATIVAS - state.count;
+                showMessage(`Matrícula inválida. Verifique e tente novamente. (${left} tentativa(s) restante(s))`, "error");
+                elInput.focus();
+            }
+
+            // Submit (Enter e clique)
+            elForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                verify();
+            });
+
+            // Inicialização
+            syncLockUI();
+
+            // Atualiza contagem regressiva do lock, se houver
+            setInterval(() => {
+                const state = loadState();
+                if (state.lockedUntil > now()) {
+                    syncLockUI();
+                } else if (elInput.disabled) {
+                    // destrava
+                    elInput.disabled = false;
+                    elBtn.disabled = false;
+                    hideMessage();
+                }
+            }, 700);
+        })();
+    </script>
 </body>
+
 </html>
