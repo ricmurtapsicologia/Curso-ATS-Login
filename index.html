@@ -1,642 +1,1168 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO / Compartilhamento -->
-    <meta name="description" content="Acesso restrito ao Curso de Atendimento a Tentativas de Suicídio - CBMMG" />
-    <meta name="keywords" content="curso, suicídio, CBMMG, acesso restrito, formação, saúde mental" />
-    <meta name="author" content="Major BM Richelmy Murta Pinto" />
+  <meta name="description" content="Acesso restrito ao Curso de Atendimento a Tentativas de Suicídio - CBMMG" />
+  <meta name="keywords" content="curso, suicídio, CBMMG, acesso restrito, formação, saúde mental" />
+  <meta name="author" content="Major BM Richelmy Murta Pinto" />
 
-    <meta property="og:title" content="Acesso Restrito - Curso de Atendimento a Tentativas de Suicídio" />
-    <meta property="og:description" content="Acesse o Curso de Atendimento a Tentativas de Suicídio do CBMMG." />
-    <meta property="og:image" content="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg" />
-    <meta property="og:url" content="https://ricmurtapsicologia.github.io/Curso-ATS/" />
-    <meta property="og:type" content="website" />
+  <meta property="og:title" content="Acesso Restrito - Curso de Atendimento a Tentativas de Suicídio" />
+  <meta property="og:description" content="Acesse o Curso de Atendimento a Tentativas de Suicídio do CBMMG." />
+  <meta property="og:image" content="https://i.pinimg.com/736x/29/42/2a/29422ad8bed8166ef119bcef4792218f.jpg" />
+  <meta property="og:url" content="https://ricmurtapsicologia.github.io/Curso-ATS/" />
+  <meta property="og:type" content="website" />
 
-    <link rel="icon" href="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg" type="image/x-icon" />
-    <title>Atendimento a Tentativas de Suicídio 2025 - CBMMG</title>
+  <link rel="icon" href="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg" type="image/x-icon" />
 
-    <style>
-        :root {
-            /* Paleta (mantida) */
-            --navy: #003366;
-            --gold: #FFDD00;
-            --white: #FFFFFF;
+  <title>Acesso Restrito | Atendimento a Tentativas de Suicídio - CBMMG</title>
 
-            /* Neutros premium */
-            --ink: #0B1220;
-            --muted: #94A3B8;
+  <style>
+    /* ==========================================================
+       1. TOKENS VISUAIS
+       ========================================================== */
 
-            /* Superfícies translúcidas */
-            --glass: rgba(0, 0, 0, .62);
-            --glass-strong: rgba(0, 0, 0, .72);
+    :root {
+      --color-bg-0: #03060b;
+      --color-bg-1: #07101f;
+      --color-bg-2: #0b1728;
 
-            /* UI */
-            --radius: 16px;
-            --radius-sm: 12px;
-            --shadow: 0 14px 36px rgba(0, 0, 0, .35);
-            --shadow-soft: 0 10px 24px rgba(0, 0, 0, .28);
-            --stroke: rgba(255, 255, 255, .10);
+      --color-navy: #003366;
+      --color-navy-light: #07569f;
+      --color-navy-dark: #001f3f;
+      --color-gold: #ffdd00;
+      --color-white: #ffffff;
+      --color-ink: #0b1220;
+      --color-muted: #cbd5e1;
+      --color-muted-soft: rgba(255, 255, 255, 0.72);
 
-            /* Espaçamento */
-            --pad: clamp(16px, 4vw, 28px);
-            --gap: 14px;
+      --color-error: #ff6f61;
+      --color-success: #28a745;
 
-            /* Tipografia */
-            --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-        }
+      --surface-stage: rgba(255, 255, 255, 0.055);
+      --surface-panel: rgba(3, 7, 14, 0.78);
+      --surface-panel-strong: rgba(3, 7, 14, 0.88);
+      --surface-input: rgba(255, 255, 255, 0.96);
 
-        /* Base */
-        * {
-            box-sizing: border-box;
-        }
+      --stroke-soft: rgba(255, 255, 255, 0.11);
+      --stroke-mid: rgba(255, 255, 255, 0.16);
+      --stroke-strong: rgba(255, 255, 255, 0.24);
 
-        html {
-            height: 100%;
-        }
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
 
-        body {
-            min-height: 100%;
-            margin: 0;
-            font-family: var(--font);
-            color: var(--white);
-            background:
-                linear-gradient(180deg, rgba(0, 0, 0, .62) 0%, rgba(0, 0, 0, .72) 55%, rgba(0, 0, 0, .80) 100%),
-                url("https://i.pinimg.com/736x/26/a3/d0/26a3d0fb70b1a5f59b1ad9d5d44e0bda.jpg") center/cover no-repeat fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: clamp(14px, 3vw, 28px);
-            overflow-x: hidden;
-        }
+      --shadow-xl: 0 34px 100px rgba(0, 0, 0, 0.58);
+      --shadow-lg: 0 22px 58px rgba(0, 0, 0, 0.44);
+      --shadow-md: 0 14px 32px rgba(0, 0, 0, 0.32);
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 
-        :focus-visible {
-            outline: 3px solid rgba(255, 221, 0, .65);
-            outline-offset: 2px;
-            border-radius: 10px;
-        }
+      --image-hero: url("https://i.pinimg.com/736x/29/42/2a/29422ad8bed8166ef119bcef4792218f.jpg");
+      --image-logo: url("https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg");
 
-        /* Acessibilidade */
-        .sr-only {
-            position: absolute !important;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
+      --transition-fast: 140ms ease;
+      --transition-base: 220ms ease;
+    }
 
-        /* Container principal (simétrico) */
-        .app {
-            width: min(920px, 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 18px;
-        }
+    /* ==========================================================
+       2. RESET E BASE
+       ========================================================== */
 
-        /* Topo */
-        .top {
-            width: 100%;
-            text-align: center;
-            padding: 18px 18px 6px;
-        }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-        .brand {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 10px 14px;
-            border-radius: 999px;
-            background: rgba(0, 0, 0, .35);
-            border: 1px solid var(--stroke);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, .18);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-        }
+    html {
+      min-height: 100%;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
 
-        .brand svg {
-            width: 18px;
-            height: 18px;
-            flex: 0 0 auto;
-        }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: var(--font-main);
+      color: var(--color-white);
+      background:
+        radial-gradient(circle at 16% 12%, rgba(255, 221, 0, 0.13), transparent 26%),
+        radial-gradient(circle at 84% 20%, rgba(0, 70, 135, 0.32), transparent 30%),
+        radial-gradient(circle at 48% 88%, rgba(255, 221, 0, 0.06), transparent 32%),
+        linear-gradient(135deg, var(--color-bg-0) 0%, var(--color-bg-1) 46%, var(--color-bg-2) 100%);
+      overflow-x: hidden;
+    }
 
-        .brand .tag {
-            font-size: 12.5px;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, .88);
-        }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(115deg, rgba(255, 255, 255, 0.045), transparent 34%),
+        radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.42) 82%);
+    }
 
-        h1 {
-            margin: 14px 0 6px;
-            font-size: clamp(22px, 3.2vw, 34px);
-            line-height: 1.15;
-            letter-spacing: -.02em;
-            color: var(--gold);
-            text-shadow: 0 2px 10px rgba(0, 0, 0, .35);
-        }
+    button,
+    input {
+      font: inherit;
+    }
 
-        .subtitle {
-            margin: 0;
-            font-size: clamp(14px, 1.7vw, 16px);
-            line-height: 1.5;
-            color: rgba(255, 255, 255, .92);
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        /* Card */
-        .card {
-            width: min(520px, 100%);
-            background: var(--glass);
-            border: 1px solid var(--stroke);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            padding: var(--pad);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
+    :focus-visible {
+      outline: 3px solid rgba(255, 221, 0, 0.78);
+      outline-offset: 3px;
+      border-radius: 10px;
+    }
 
-        .card-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 14px;
-            text-align: center;
-        }
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
 
-        .logo-row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 10px 12px;
-            border-radius: 14px;
-            background: rgba(0, 0, 0, .22);
-            border: 1px solid rgba(255, 255, 255, .08);
-            width: 100%;
-        }
+    /* ==========================================================
+       3. LAYOUT PRINCIPAL
+       ========================================================== */
 
-        .logo {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, .14);
-            box-shadow: 0 10px 18px rgba(0, 0, 0, .20);
-            object-fit: cover;
-            background: rgba(0, 0, 0, .25);
-            flex: 0 0 auto;
-        }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(18px, 4vw, 46px);
+    }
 
-        .card-title {
-            margin: 0;
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--white);
-            letter-spacing: .01em;
-        }
+    .shell {
+      width: min(1160px, 100%);
+      display: grid;
+      gap: 14px;
+    }
 
-        .card-note {
-            margin: 0;
-            font-size: 13px;
-            color: rgba(255, 255, 255, .80);
-        }
+    .stage {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(380px, 0.88fr);
+      min-height: clamp(560px, 72vh, 650px);
+      overflow: hidden;
+      border: 1px solid var(--stroke-soft);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025)),
+        var(--surface-stage);
+      box-shadow: var(--shadow-xl);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
 
-        /* Form */
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 12px;
-        }
+    /* ==========================================================
+       4. HERO
+       ========================================================== */
 
-        label {
-            font-size: 13px;
-            color: rgba(255, 255, 255, .92);
-            text-align: left;
-        }
+    .hero {
+      position: relative;
+      min-height: 100%;
+      isolation: isolate;
+      overflow: hidden;
+      background:
+        linear-gradient(115deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.40) 47%, rgba(0, 0, 0, 0.84) 100%),
+        var(--image-hero) center / cover no-repeat;
+    }
 
-        .field {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            text-align: left;
-        }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 30% 26%, rgba(255, 221, 0, 0.22), transparent 28%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.74));
+      pointer-events: none;
+    }
 
-        .input {
-            width: 100%;
-            padding: 12px 14px;
-            border-radius: var(--radius-sm);
-            border: 1px solid rgba(255, 255, 255, .14);
-            background: rgba(255, 255, 255, .96);
-            color: var(--ink);
-            font-size: 16px;
-            line-height: 1.2;
-            outline: none;
-            box-shadow: 0 10px 18px rgba(0, 0, 0, .12);
-        }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.20), transparent 52%),
+        radial-gradient(circle at center, transparent 20%, rgba(0, 0, 0, 0.42) 100%);
+      pointer-events: none;
+    }
 
-        .input::placeholder {
-            color: rgba(15, 23, 42, .55);
-        }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(28px, 4vw, 48px);
+    }
 
-        .input:focus {
-            border-color: rgba(255, 221, 0, .65);
-            box-shadow: 0 0 0 4px rgba(255, 221, 0, .18), 0 12px 22px rgba(0, 0, 0, .14);
-        }
+    .brand-mark {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.92);
+    }
 
-        .help {
-            font-size: 12.5px;
-            color: rgba(255, 255, 255, .74);
-            margin: 0;
-        }
+    .brand-mark-icon {
+      display: grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: rgba(255, 221, 0, 0.14);
+      color: var(--color-gold);
+      box-shadow: 0 0 0 1px rgba(255, 221, 0, 0.22);
+    }
 
-        .btn {
-            width: 100%;
-            padding: 12px 14px;
-            border-radius: var(--radius-sm);
-            border: 1px solid rgba(255, 255, 255, .12);
-            background: linear-gradient(180deg, rgba(0, 51, 102, 1) 0%, rgba(0, 35, 70, 1) 100%);
-            color: var(--white);
-            font-weight: 800;
-            letter-spacing: .06em;
-            text-transform: uppercase;
-            cursor: pointer;
-            box-shadow: var(--shadow-soft);
-            transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
-        }
+    .brand-mark-icon svg {
+      width: 14px;
+      height: 14px;
+    }
 
-        .btn:hover {
-            filter: brightness(1.06);
-        }
+    .brand-mark-text {
+      font-size: 12.5px;
+      font-weight: 850;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
 
-        .btn:active {
-            transform: translateY(1px);
-        }
+    .hero-main {
+      max-width: 720px;
+      padding-top: 80px;
+    }
 
-        .btn:disabled {
-            cursor: not-allowed;
-            opacity: .62;
-            filter: grayscale(.2);
-            box-shadow: none;
-        }
+    .hero-kicker {
+      display: inline-block;
+      margin-bottom: 16px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+    }
 
-        /* Feedback */
-        .msg {
-            display: none;
-            padding: 10px 12px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, .10);
-            background: var(--glass-strong);
-            color: rgba(255, 255, 255, .92);
-            font-size: 13.5px;
-            line-height: 1.4;
-        }
+    .hero-title {
+      max-width: 660px;
+      margin: 0;
+      font-size: clamp(42px, 5.25vw, 72px);
+      line-height: 0.97;
+      letter-spacing: -0.06em;
+      color: var(--color-white);
+      text-wrap: balance;
+      text-shadow: 0 8px 28px rgba(0, 0, 0, 0.56);
+    }
 
-        .msg[data-tone="error"] {
-            border-color: rgba(255, 111, 97, .35);
-            box-shadow: 0 0 0 3px rgba(255, 111, 97, .10);
-        }
+    .hero-title .accent {
+      color: var(--color-gold);
+      font-weight: 950;
+    }
 
-        .msg[data-tone="success"] {
-            border-color: rgba(40, 167, 69, .35);
-            box-shadow: 0 0 0 3px rgba(40, 167, 69, .10);
-        }
+    .hero-text {
+      max-width: 620px;
+      margin: 22px 0 0;
+      font-size: clamp(15px, 1.42vw, 18px);
+      line-height: 1.62;
+      color: rgba(255, 255, 255, 0.86);
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.36);
+    }
 
-        .msg .row {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-        }
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 30px;
+      max-width: 620px;
+    }
 
-        .icon {
-            width: 18px;
-            height: 18px;
-            flex: 0 0 auto;
-            margin-top: 1px;
-        }
+    .hero-metric {
+      min-height: 74px;
+      padding: 13px 13px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      border-radius: 16px;
+      background: rgba(0, 0, 0, 0.28);
+    }
 
-        /* Rodapé (simétrico e centralizado) */
-        footer {
-            width: 100%;
-            text-align: center;
-            color: rgba(255, 255, 255, .78);
-            font-size: 12.5px;
-            padding: 8px 10px;
-        }
+    .hero-metric strong {
+      display: block;
+      font-size: 20px;
+      line-height: 1;
+      color: var(--color-gold);
+      letter-spacing: -0.02em;
+    }
 
-        footer .foot {
-            display: inline-flex;
-            gap: 10px;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 14px;
-            border-radius: 999px;
-            background: rgba(0, 0, 0, .34);
-            border: 1px solid var(--stroke);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-        }
+    .hero-metric span {
+      display: block;
+      margin-top: 7px;
+      font-size: 12px;
+      line-height: 1.32;
+      color: rgba(255, 255, 255, 0.76);
+    }
 
-        /* Microajustes mobile */
-        @media (max-width: 420px) {
-            .logo-row {
-                padding: 10px;
-            }
+    /* ==========================================================
+       5. LOGIN
+       ========================================================== */
 
-            .logo {
-                width: 36px;
-                height: 36px;
-            }
+    .login-panel {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(26px, 4vw, 46px);
+      background:
+        linear-gradient(180deg, rgba(3, 7, 14, 0.78), rgba(3, 7, 14, 0.92)),
+        rgba(3, 7, 14, 0.82);
+      border-left: 1px solid var(--stroke-soft);
+    }
 
-            .card {
-                padding: 18px;
-            }
-        }
+    .login-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 221, 0, 0.06), transparent 28%),
+        radial-gradient(circle at 86% 80%, rgba(0, 84, 166, 0.16), transparent 32%);
+    }
 
-        /* Respeitar preferências do usuário */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                scroll-behavior: auto !important;
-                transition: none !important;
-                animation: none !important;
-            }
+    .login-card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 430px;
+      margin: 0 auto;
+    }
 
-            .btn {
-                transition: none !important;
-            }
-        }
-    </style>
+    .login-header {
+      margin-bottom: 24px;
+    }
+
+    .login-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 18px;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .login-brand svg {
+      width: 16px;
+      height: 16px;
+      color: var(--color-gold);
+      flex: 0 0 auto;
+    }
+
+    .login-brand span {
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .login-title {
+      margin: 0;
+      font-size: clamp(31px, 3.4vw, 42px);
+      line-height: 1.04;
+      letter-spacing: -0.052em;
+      color: var(--color-white);
+    }
+
+    .login-title .accent {
+      color: var(--color-gold);
+    }
+
+    .login-subtitle {
+      margin: 10px 0 0;
+      font-size: 15px;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .course-id {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      margin-bottom: 22px;
+      padding: 12px 0 18px;
+      border-bottom: 1px solid var(--stroke-soft);
+    }
+
+    .course-logo {
+      width: 46px;
+      height: 46px;
+      flex: 0 0 auto;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 14px;
+      background:
+        var(--image-logo) center / cover no-repeat,
+        rgba(255, 255, 255, 0.06);
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.26);
+    }
+
+    .course-title {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 900;
+      line-height: 1.25;
+      color: var(--color-white);
+    }
+
+    .course-note {
+      margin: 4px 0 0;
+      font-size: 12.5px;
+      line-height: 1.35;
+      color: rgba(255, 255, 255, 0.67);
+    }
+
+    /* ==========================================================
+       6. FORMULÁRIO
+       ========================================================== */
+
+    .login-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .login-field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .login-label {
+      font-size: 13px;
+      font-weight: 850;
+      color: rgba(255, 255, 255, 0.90);
+    }
+
+    .login-input {
+      width: 100%;
+      min-height: 52px;
+      padding: 13px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-sm);
+      background: var(--surface-input);
+      color: var(--color-ink);
+      font-size: 16px;
+      line-height: 1.2;
+      outline: none;
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
+      transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        transform var(--transition-fast);
+    }
+
+    .login-input::placeholder {
+      color: rgba(15, 23, 42, 0.44);
+    }
+
+    .login-input:focus {
+      border-color: rgba(255, 221, 0, 0.78);
+      box-shadow:
+        0 0 0 4px rgba(255, 221, 0, 0.18),
+        0 14px 26px rgba(0, 0, 0, 0.20);
+    }
+
+    .login-input:disabled {
+      cursor: not-allowed;
+      opacity: 0.72;
+      background: rgba(226, 232, 240, 0.96);
+    }
+
+    .login-help {
+      margin: 0;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.66);
+    }
+
+    .login-button {
+      width: 100%;
+      min-height: 52px;
+      padding: 13px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-sm);
+      background:
+        linear-gradient(180deg, var(--color-navy-light) 0%, var(--color-navy) 52%, var(--color-navy-dark) 100%);
+      color: var(--color-white);
+      font-weight: 950;
+      letter-spacing: 0.075em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      transition:
+        transform var(--transition-fast),
+        filter var(--transition-fast),
+        box-shadow var(--transition-fast);
+    }
+
+    .login-button:hover:not(:disabled) {
+      filter: brightness(1.08);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.36);
+    }
+
+    .login-button:active:not(:disabled) {
+      transform: translateY(1px);
+    }
+
+    .login-button:disabled {
+      cursor: not-allowed;
+      opacity: 0.62;
+      filter: grayscale(0.24);
+      box-shadow: none;
+    }
+
+    /* ==========================================================
+       7. MENSAGENS
+       ========================================================== */
+
+    .login-message {
+      display: none;
+      padding: 12px;
+      border: 1px solid var(--stroke-soft);
+      border-radius: var(--radius-sm);
+      background: var(--surface-panel-strong);
+      color: rgba(255, 255, 255, 0.94);
+      font-size: 13.5px;
+      line-height: 1.42;
+    }
+
+    .login-message.is-visible {
+      display: block;
+    }
+
+    .login-message[data-tone="error"] {
+      border-color: rgba(255, 111, 97, 0.46);
+      box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.11);
+    }
+
+    .login-message[data-tone="success"] {
+      border-color: rgba(40, 167, 69, 0.48);
+      box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.12);
+    }
+
+    .login-message-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+    }
+
+    .login-message-icon {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+      margin-top: 1px;
+      color: currentColor;
+    }
+
+    /* ==========================================================
+       8. FOOTER
+       ========================================================== */
+
+    .page-footer {
+      padding: 0 4px;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 12px;
+      line-height: 1.4;
+      text-align: right;
+    }
+
+    /* ==========================================================
+       9. RESPONSIVIDADE
+       ========================================================== */
+
+    @media (max-width: 1020px) {
+      .page {
+        align-items: flex-start;
+      }
+
+      .shell {
+        width: min(680px, 100%);
+      }
+
+      .stage {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .hero {
+        min-height: 330px;
+      }
+
+      .hero-content {
+        min-height: 330px;
+      }
+
+      .hero-main {
+        padding-top: 42px;
+      }
+
+      .hero-title {
+        max-width: 560px;
+        font-size: clamp(36px, 9vw, 58px);
+      }
+
+      .login-panel {
+        border-left: 0;
+        border-top: 1px solid var(--stroke-soft);
+      }
+
+      .login-card {
+        max-width: 100%;
+      }
+
+      .page-footer {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .page {
+        padding: 14px;
+      }
+
+      .stage {
+        border-radius: 22px;
+      }
+
+      .hero {
+        min-height: 245px;
+      }
+
+      .hero-content {
+        min-height: 245px;
+        padding: 20px;
+      }
+
+      .brand-mark-text,
+      .login-brand span {
+        font-size: 11px;
+      }
+
+      .hero-main {
+        padding-top: 26px;
+      }
+
+      .hero-kicker {
+        margin-bottom: 10px;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+      }
+
+      .hero-title {
+        font-size: clamp(32px, 12vw, 46px);
+        line-height: 0.99;
+      }
+
+      .hero-text {
+        margin-top: 14px;
+        font-size: 13.5px;
+        line-height: 1.48;
+      }
+
+      .hero-metrics {
+        display: none;
+      }
+
+      .login-panel {
+        padding: 22px 18px 24px;
+      }
+
+      .login-header {
+        margin-bottom: 20px;
+      }
+
+      .login-title {
+        font-size: 32px;
+      }
+
+      .course-id {
+        align-items: flex-start;
+      }
+
+      .course-logo {
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .login-title {
+        font-size: 30px;
+      }
+
+      .hero-title {
+        font-size: 34px;
+      }
+
+      .page {
+        padding: 10px;
+      }
+
+      .login-panel {
+        padding-inline: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="app">
-        <header class="top" role="banner">
-            <div class="brand" aria-label="Identificação institucional">
-                <!-- Ícone simples inline (mantém paleta) -->
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path fill="var(--gold)" d="M12 2l2.2 6.8H21l-5.5 4 2.1 6.7L12 15.7 6.4 19.5 8.5 12.8 3 8.8h6.8z" />
+  <main class="page" aria-labelledby="pageTitle">
+    <div class="shell">
+      <div class="stage">
+        <section class="hero" aria-label="Capa institucional do curso">
+          <div class="hero-content">
+            <div class="brand-mark" aria-label="Identificação institucional">
+              <span class="brand-mark-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path fill="currentColor" d="M12 2l2.2 6.8H21l-5.5 4 2.1 6.7L12 15.7 6.4 19.5 8.5 12.8 3 8.8h6.8z" />
                 </svg>
-                <span class="tag">CBMMG • Conteúdo Institucional</span>
+              </span>
+              <span class="brand-mark-text">CBMMG • Conteúdo institucional</span>
             </div>
 
-            <h1>Atendimento a Tentativas de Suicídio – CBMMG</h1>
-            <p class="subtitle">Acesso restrito ao conteúdo institucional</p>
-        </header>
+            <div class="hero-main">
+              <span class="hero-kicker">Curso EAD • Acesso restrito</span>
 
-        <main class="card" role="main" aria-labelledby="login-title">
-            <div class="card-header">
-                <div class="logo-row">
-                    <img class="logo" src="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg" alt="Logomarca institucional" loading="lazy" decoding="async" />
-                    <div style="text-align:left; width:100%;">
-                        <p class="card-title" id="login-title">Acesso Restrito</p>
-                        <p class="card-note">Somente militares autorizados.</p>
-                    </div>
+              <h1 class="hero-title" id="pageTitle">
+                Atendimento a Tentativas de <span class="accent">Suicídio</span>
+              </h1>
+
+              <p class="hero-text">
+                Ambiente institucional de apoio à formação técnica em atendimento, comunicação e manejo inicial de ocorrências críticas.
+              </p>
+
+              <div class="hero-metrics" aria-label="Resumo institucional do ambiente">
+                <div class="hero-metric">
+                  <strong>ATS</strong>
+                  <span>Capacitação técnica</span>
                 </div>
+
+                <div class="hero-metric">
+                  <strong>EAD</strong>
+                  <span>Ambiente virtual</span>
+                </div>
+
+                <div class="hero-metric">
+                  <strong>CBMMG</strong>
+                  <span>Conteúdo institucional</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="login-panel" aria-label="Área de acesso restrito">
+          <article class="login-card">
+            <header class="login-header">
+              <div class="login-brand" aria-label="Curso institucional CBMMG">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path fill="currentColor" d="M12 2l2.2 6.8H21l-5.5 4 2.1 6.7L12 15.7 6.4 19.5 8.5 12.8 3 8.8h6.8z" />
+                </svg>
+                <span>CBMMG • Curso institucional</span>
+              </div>
+
+              <h2 class="login-title">Acesso <span class="accent">restrito</span></h2>
+              <p class="login-subtitle">Informe sua matrícula para acessar o ambiente do curso.</p>
+            </header>
+
+            <div class="course-id">
+              <div class="course-logo" aria-hidden="true"></div>
+
+              <div>
+                <p class="course-title">Atendimento a Tentativas de Suicídio</p>
+                <p class="course-note">Acesso autorizado a militares cadastrados.</p>
+              </div>
             </div>
 
-            <form id="loginForm" novalidate>
-                <div class="field">
-                    <label for="matricula">Matrícula (7 dígitos)</label>
-                    <input class="input" type="text" id="matricula" inputmode="numeric" autocomplete="one-time-code" placeholder="Ex.: 1703963" aria-describedby="helpText" aria-required="true" maxlength="7" />
-                    <p class="help" id="helpText">Digite apenas números. O acesso é validado localmente neste dispositivo.</p>
-                </div>
+            <form class="login-form" id="loginForm" novalidate>
+              <div class="login-field">
+                <label class="login-label" for="matricula">Matrícula</label>
 
-                <button class="btn" id="btnAcessar" type="submit">Acessar</button>
+                <input
+                  class="login-input"
+                  type="text"
+                  id="matricula"
+                  name="matricula"
+                  inputmode="numeric"
+                  autocomplete="one-time-code"
+                  placeholder="Ex.: 1703963"
+                  aria-describedby="loginHelp"
+                  aria-required="true"
+                  maxlength="7"
+                />
 
-                <div class="msg" id="mensagem" role="status" aria-live="polite" aria-atomic="true">
-                    <div class="row">
-                        <svg class="icon" id="msgIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                            <path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 14h-2v-2h2v2zm0-4h-2V6h2v6z" />
-                        </svg>
-                        <span id="msgText">Mensagem</span>
-                    </div>
+                <p class="login-help" id="loginHelp">Digite somente os números da matrícula.</p>
+              </div>
+
+              <button class="login-button" id="btnAcessar" type="submit">Acessar</button>
+
+              <div
+                class="login-message"
+                id="mensagem"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+              >
+                <div class="login-message-row">
+                  <svg class="login-message-icon" id="msgIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 14h-2v-2h2v2zm0-4h-2V6h2v6z" />
+                  </svg>
+                  <span id="msgText">Mensagem</span>
                 </div>
+              </div>
             </form>
-        </main>
+          </article>
+        </section>
+      </div>
 
-        <footer>
-            <div class="foot">© 2026 Major BM Richelmy Murta Pinto. Todos os direitos reservados.</div>
-        </footer>
+      <footer class="page-footer">
+        © 2026 Major BM Richelmy Murta Pinto. Todos os direitos reservados.
+      </footer>
     </div>
+  </main>
 
-    <script>
-        (function() {
-            "use strict";
+  <script>
+    (function () {
+      "use strict";
 
-            // Observação: validação client-side não é segurança. Os controles abaixo são apenas anti-abuso básico.
-            const DESTINO = "https://ricmurtapsicologia.github.io/Curso-ATS/"; // conservar link de acesso à página principal
+      /*
+        A validação por matrícula em JavaScript é uma barreira leve de acesso.
+        Como ocorre no lado do cliente, não substitui autenticação real com servidor,
+        sessão e controle de permissões.
+      */
 
-            const elForm = document.getElementById("loginForm");
-            const elInput = document.getElementById("matricula");
-            const elBtn = document.getElementById("btnAcessar");
-            const elMsg = document.getElementById("mensagem");
-            const elMsgText = document.getElementById("msgText");
-            const elMsgIcon = document.getElementById("msgIcon");
+      const LOGIN_CONFIG = Object.freeze({
+        redirectUrl: "https://ricmurtapsicologia.github.io/Curso-ATS/",
+        storageKey: "ats_login_attempts_v1",
+        maxAttempts: 5,
+        cooldownMs: 30_000,
+        redirectDelayMs: 700,
+        requiredDigits: 7
+      });
 
-            // ====== Matrículas (conservar) ======
-            // Ofuscação leve para reduzir scraping trivial (não é segurança)
-            const _raw = [
-                "1368646", "1359843", "1430750", "1605971", "1603687", "1613892", "1674993", "1075795", "1363845", "1550375",
-                "1480128", "1479278", "1554559", "1525120", "1245661", "1549880", "1479088", "1524776", "1644525", "1788868",
-                "terapiadoesquema", "5212651", "9104046", "1151258", "12597010", "1725936", "1728815", "1726678", "1728831",
-                "1726033", "1636315", "1730340", "1729896", "1726157", "1727080", "1729581", "1638535", "1644772", "1645365",
-                "1728708", "1729953", "1645092", "1638022", "1641349", "1728120", "1729458", "1726066", "1728054", "1639798",
-                "1727049", "1727361", "1642388", "1727841", "1641000", "1605260", "1730084", "1365303", "1479666", "1311588",
-                "1637024", "1822410", "1317288", "1644467", "1822899", "1640556", "05631415658", "1655562", "1525096", "1333681",
-                "1644707", "1821719", "1365584", "1725829", "1635762", "1361757", "1479674", "1554138", "1641323", "1785906",
-                "1766377", "1525427", "1317809", "7200064", "1722057", "1729334", "1636117", "1554880", "01188250620", "7488890",
-                "1368687", "1644301", "1821669", "1554914", "1272707", "1317080", "1550615", "294424742", "07360928621",
-                "professoraadriana", "1824275", "1786110", "1728849", "1727296", "1822418", "1789999", "1725886", "1824226",
-                "1636364", "1729839", "1824259", "1786847", "1824234", "2428598", "1729961", "1824200", "1725993", "2139499",
-                "1479666", "2240572", "1821826", "2428636", "1824358", "2414880", "2428547", "1824341", "2428610", "2428557",
-                "1730126", "2428628", "2242010", "2428709", "2400570", "1824267", "1824242", "1482058", "1480607", "1481555",
-                "1481506", "1317734", "1528124", "1479435", "1480478", "1530138", "1481775", "1497497", "1361047", "1480367",
-                "1520653", "1481639", "1481290", "1481504", "1528298", "1480508", "1360270", "63198428149", "1527654", "1727312",
-                "1550102", "1479476", "1549138", "1528819", "1481928", "1551241", "1555119", "1525534", "1554880", "1323351",
-                "1529395", "1551829", "1481035", "1479930", "1548650", "1551209", "1525476", "1524834", "1481258", "1361484"
+      const RAW_REGISTRATIONS = Object.freeze([
+        "1368646", "1359843", "1430750", "1605971", "1603687", "1613892", "1674993", "1075795", "1363845", "1550375",
+        "1480128", "1479278", "1554559", "1525120", "1245661", "1549880", "1479088", "1524776", "1644525", "1788868",
+        "terapiadoesquema", "5212651", "9104046", "1151258", "12597010", "1725936", "1728815", "1726678", "1728831",
+        "1726033", "1636315", "1730340", "1729896", "1726157", "1727080", "1729581", "1638535", "1644772", "1645365",
+        "1728708", "1729953", "1645092", "1638022", "1641349", "1728120", "1729458", "1726066", "1728054", "1639798",
+        "1727049", "1727361", "1642388", "1727841", "1641000", "1605260", "1730084", "1365303", "1479666", "1311588",
+        "1637024", "1822410", "1317288", "1644467", "1822899", "1640556", "05631415658", "1655562", "1525096", "1333681",
+        "1644707", "1821719", "1365584", "1725829", "1635762", "1361757", "1479674", "1554138", "1641323", "1785906",
+        "1766377", "1525427", "1317809", "7200064", "1722057", "1729334", "1636117", "1554880", "01188250620", "7488890",
+        "1368687", "1644301", "1821669", "1554914", "1272707", "1317080", "1550615", "294424742", "07360928621",
+        "professoraadriana", "1824275", "1786110", "1728849", "1727296", "1822418", "1789999", "1725886", "1824226",
+        "1636364", "1729839", "1824259", "1786847", "1824234", "2428598", "1729961", "1824200", "1725993", "2139499",
+        "1479666", "2240572", "1821826", "2428636", "1824358", "2414880", "2428547", "1824341", "2428610", "2428557",
+        "1730126", "2428628", "2242010", "2428709", "2400570", "1824267", "1824242", "1482058", "1480607", "1481555",
+        "1481506", "1317734", "1528124", "1479435", "1480478", "1530138", "1481775", "1497497", "1361047", "1480367",
+        "1520653", "1481639", "1481290", "1481504", "1528298", "1480508", "1360270", "63198428149", "1527654", "1727312",
+        "1550102", "1479476", "1549138", "1528819", "1481928", "1551241", "1555119", "1525534", "1554880", "1323351",
+        "1529395", "1551829", "1481035", "1479930", "1548650", "1551209", "1525476", "1524834", "1481258", "1361484"
+      ]);
 
-            ];
+      const AUTHORIZED_REGISTRATIONS = new Set(
+        RAW_REGISTRATIONS.map((registration) => String(registration))
+      );
 
-            // Transformação leve: inverte strings e reconstrói em runtime (anti-cópia trivial)
-            const encoded = _raw.map(s => s.split("").reverse().join(""));
-            const matriculasSet = new Set(encoded.map(s => s.split("").reverse().join("")));
+      const MESSAGE_ICONS = Object.freeze({
+        error: '<path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 14h-2v-2h2v2zm0-4h-2V6h2v6z"/>',
+        success: '<path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 14-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7z"/>'
+      });
 
-            // ====== Rate-limit / Cooldown ======
-            const STORAGE_KEY = "ats_login_attempts_v1";
-            const MAX_TENTATIVAS = 5;
-            const COOLDOWN_MS = 30_000;
+      const dom = {
+        form: null,
+        input: null,
+        button: null,
+        message: null,
+        messageText: null,
+        messageIcon: null
+      };
 
-            function now() {
-                return Date.now();
-            }
+      let countdownTimerId = null;
 
-            function loadState() {
-                try {
-                    const raw = localStorage.getItem(STORAGE_KEY);
-                    if (!raw) return {
-                        count: 0,
-                        lockedUntil: 0
-                    };
-                    const parsed = JSON.parse(raw);
-                    return {
-                        count: Number(parsed.count || 0),
-                        lockedUntil: Number(parsed.lockedUntil || 0)
-                    };
-                } catch {
-                    return {
-                        count: 0,
-                        lockedUntil: 0
-                    };
-                }
-            }
+      function now() {
+        return Date.now();
+      }
 
-            function saveState(state) {
-                try {
-                    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-                } catch {}
-            }
+      function selectRequiredElements() {
+        dom.form = document.getElementById("loginForm");
+        dom.input = document.getElementById("matricula");
+        dom.button = document.getElementById("btnAcessar");
+        dom.message = document.getElementById("mensagem");
+        dom.messageText = document.getElementById("msgText");
+        dom.messageIcon = document.getElementById("msgIcon");
 
-            function setLocked(msFromNow) {
-                const state = loadState();
-                state.lockedUntil = now() + msFromNow;
-                state.count = 0;
-                saveState(state);
-                syncLockUI();
-            }
+        return Boolean(
+          dom.form &&
+          dom.input &&
+          dom.button &&
+          dom.message &&
+          dom.messageText &&
+          dom.messageIcon
+        );
+      }
 
-            function syncLockUI() {
-                const state = loadState();
-                const remaining = state.lockedUntil - now();
-                const locked = remaining > 0;
+      function normalizeRegistration(value) {
+        return String(value || "")
+          .replace(/\D+/g, "")
+          .slice(0, LOGIN_CONFIG.requiredDigits);
+      }
 
-                elBtn.disabled = locked;
-                elInput.disabled = locked;
+      function getDefaultAttemptState() {
+        return {
+          count: 0,
+          lockedUntil: 0
+        };
+      }
 
-                if (locked) {
-                    const secs = Math.ceil(remaining / 1000);
-                    showMessage(`Muitas tentativas. Aguarde ${secs}s e tente novamente.`, "error");
-                }
-            }
+      function loadAttemptState() {
+        try {
+          const rawState = localStorage.getItem(LOGIN_CONFIG.storageKey);
 
-            // ====== UI Mensagens ======
-            function showMessage(text, tone) {
-                elMsg.style.display = "block";
-                elMsg.dataset.tone = tone;
+          if (!rawState) {
+            return getDefaultAttemptState();
+          }
 
-                elMsgText.textContent = text;
+          const parsedState = JSON.parse(rawState);
 
-                // Ícone muda sutilmente pelo tom
-                if (tone === "success") {
-                    elMsgIcon.innerHTML = '<path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 14-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7z"/>';
-                } else {
-                    elMsgIcon.innerHTML = '<path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 14h-2v-2h2v2zm0-4h-2V6h2v6z"/>';
-                }
-            }
+          return {
+            count: Number(parsedState.count || 0),
+            lockedUntil: Number(parsedState.lockedUntil || 0)
+          };
+        } catch {
+          return getDefaultAttemptState();
+        }
+      }
 
-            function hideMessage() {
-                elMsg.style.display = "none";
-                elMsg.removeAttribute("data-tone");
-            }
+      function saveAttemptState(state) {
+        try {
+          localStorage.setItem(LOGIN_CONFIG.storageKey, JSON.stringify({
+            count: Number(state.count || 0),
+            lockedUntil: Number(state.lockedUntil || 0)
+          }));
+        } catch {
+          /*
+            Se o navegador bloquear localStorage, o login segue funcionando.
+            Apenas o controle persistente de cooldown pode ficar limitado.
+          */
+        }
+      }
 
-            // ====== Normalização de input ======
-            function normalizeMatricula(value) {
-                const digitsOnly = (value || "").replace(/\D+/g, "").slice(0, 7);
-                return digitsOnly;
-            }
+      function clearAttemptState() {
+        saveAttemptState(getDefaultAttemptState());
+      }
 
-            // Enforce digits while typing (mobile-friendly)
-            elInput.addEventListener("input", () => {
-                const normalized = normalizeMatricula(elInput.value);
-                if (elInput.value !== normalized) elInput.value = normalized;
-                hideMessage();
-            });
+      function showMessage(text, tone) {
+        const safeTone = tone === "success" ? "success" : "error";
 
-            // ====== Verificação ======
-            function verify() {
-                syncLockUI();
-                const state = loadState();
-                if (state.lockedUntil > now()) return;
+        dom.message.classList.add("is-visible");
+        dom.message.dataset.tone = safeTone;
+        dom.messageText.textContent = text;
+        dom.messageIcon.innerHTML = MESSAGE_ICONS[safeTone];
+      }
 
-                const matricula = normalizeMatricula(elInput.value).trim();
+      function hideMessage() {
+        dom.message.classList.remove("is-visible");
+        dom.message.removeAttribute("data-tone");
+        dom.messageText.textContent = "";
+      }
 
-                if (!matricula) {
-                    showMessage("Informe sua matrícula para continuar.", "error");
-                    elInput.focus();
-                    return;
-                }
+      function focusInput() {
+        if (!dom.input.disabled) {
+          dom.input.focus();
+        }
+      }
 
-                if (matricula.length !== 7) {
-                    showMessage("Matrícula incompleta. Informe 7 dígitos.", "error");
-                    elInput.focus();
-                    return;
-                }
+      function getRemainingLockMs() {
+        const state = loadAttemptState();
+        return Math.max(0, state.lockedUntil - now());
+      }
 
-                const ok = matriculasSet.has(matricula);
+      function setControlsLocked(isLocked) {
+        dom.input.disabled = isLocked;
+        dom.button.disabled = isLocked;
+      }
 
-                if (ok) {
-                    showMessage("Acesso autorizado. Redirecionando…", "success");
-                    try {
-                        saveState({
-                            count: 0,
-                            lockedUntil: 0
-                        });
-                    } catch {}
-                    setTimeout(() => {
-                        window.location.href = DESTINO;
-                    }, 700);
-                    return;
-                }
+      function clearCountdownTimer() {
+        if (countdownTimerId !== null) {
+          window.clearInterval(countdownTimerId);
+          countdownTimerId = null;
+        }
+      }
 
-                // Erro: contabiliza tentativa
-                state.count += 1;
-                saveState(state);
+      function unlockControls() {
+        clearCountdownTimer();
+        clearAttemptState();
+        setControlsLocked(false);
+        hideMessage();
+        focusInput();
+      }
 
-                if (state.count >= MAX_TENTATIVAS) {
-                    setLocked(COOLDOWN_MS);
-                    return;
-                }
+      function syncLockUI() {
+        const remainingMs = getRemainingLockMs();
 
-                const left = MAX_TENTATIVAS - state.count;
-                showMessage(`Matrícula inválida. Verifique e tente novamente. (${left} tentativa(s) restante(s))`, "error");
-                elInput.focus();
-            }
+        if (remainingMs <= 0) {
+          if (dom.input.disabled || dom.button.disabled) {
+            unlockControls();
+          }
 
-            // Submit (Enter e clique)
-            elForm.addEventListener("submit", (e) => {
-                e.preventDefault();
-                verify();
-            });
+          return false;
+        }
 
-            // Inicialização
-            syncLockUI();
+        const remainingSeconds = Math.ceil(remainingMs / 1000);
 
-            // Atualiza contagem regressiva do lock, se houver
-            setInterval(() => {
-                const state = loadState();
-                if (state.lockedUntil > now()) {
-                    syncLockUI();
-                } else if (elInput.disabled) {
-                    // destrava
-                    elInput.disabled = false;
-                    elBtn.disabled = false;
-                    hideMessage();
-                }
-            }, 700);
-        })();
-    </script>
+        setControlsLocked(true);
+        showMessage(
+          `Muitas tentativas. Aguarde ${remainingSeconds}s antes de tentar novamente.`,
+          "error"
+        );
+
+        return true;
+      }
+
+      function startCountdownIfLocked() {
+        clearCountdownTimer();
+
+        if (!syncLockUI()) {
+          return;
+        }
+
+        countdownTimerId = window.setInterval(() => {
+          const isStillLocked = syncLockUI();
+
+          if (!isStillLocked) {
+            unlockControls();
+          }
+        }, 700);
+      }
+
+      function setLocked(msFromNow) {
+        saveAttemptState({
+          count: 0,
+          lockedUntil: now() + Number(msFromNow || 0)
+        });
+
+        startCountdownIfLocked();
+      }
+
+      function validateRegistration() {
+        if (syncLockUI()) {
+          return;
+        }
+
+        const registration = normalizeRegistration(dom.input.value);
+        dom.input.value = registration;
+
+        if (!registration) {
+          showMessage("Informe sua matrícula para continuar.", "error");
+          focusInput();
+          return;
+        }
+
+        if (registration.length !== LOGIN_CONFIG.requiredDigits) {
+          showMessage("Matrícula incompleta. Digite os 7 números.", "error");
+          focusInput();
+          return;
+        }
+
+        if (AUTHORIZED_REGISTRATIONS.has(registration)) {
+          showMessage("Acesso autorizado. Redirecionando para o curso.", "success");
+          clearAttemptState();
+          setControlsLocked(true);
+
+          window.setTimeout(() => {
+            window.location.href = LOGIN_CONFIG.redirectUrl;
+          }, LOGIN_CONFIG.redirectDelayMs);
+
+          return;
+        }
+
+        const state = loadAttemptState();
+        const nextCount = state.count + 1;
+        const remainingAttempts = LOGIN_CONFIG.maxAttempts - nextCount;
+
+        saveAttemptState({
+          count: nextCount,
+          lockedUntil: 0
+        });
+
+        if (nextCount >= LOGIN_CONFIG.maxAttempts) {
+          setLocked(LOGIN_CONFIG.cooldownMs);
+          return;
+        }
+
+        showMessage(
+          `Matrícula não localizada. Verifique os números e tente novamente. (${remainingAttempts} tentativa(s) restante(s))`,
+          "error"
+        );
+
+        focusInput();
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+        validateRegistration();
+      }
+
+      function handleInput() {
+        const normalizedValue = normalizeRegistration(dom.input.value);
+
+        if (dom.input.value !== normalizedValue) {
+          dom.input.value = normalizedValue;
+        }
+
+        hideMessage();
+      }
+
+      function initLogin() {
+        if (!selectRequiredElements()) {
+          console.error("Falha ao inicializar login: elementos essenciais não foram encontrados.");
+          return;
+        }
+
+        dom.form.addEventListener("submit", handleSubmit);
+        dom.input.addEventListener("input", handleInput);
+
+        startCountdownIfLocked();
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initLogin, { once: true });
+      } else {
+        initLogin();
+      }
+    })();
+  </script>
 </body>
-
 </html>
