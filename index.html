@@ -4,71 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description" content="Acesso restrito ao Curso de Atendimento a Tentativas de Suicídio - CBMMG" />
-  <meta name="keywords" content="curso, suicídio, CBMMG, acesso restrito, formação, saúde mental" />
+  <meta name="description" content="Acesso restrito ao material de apoio às aulas de Atendimento a Tentativas de Suicídio - CBMMG" />
+  <meta name="keywords" content="ATS, CBMMG, acesso restrito, material de apoio, atendimento a tentativas de suicídio" />
   <meta name="author" content="Major BM Richelmy Murta Pinto" />
 
-  <meta property="og:title" content="Acesso Restrito - Curso de Atendimento a Tentativas de Suicídio" />
-  <meta property="og:description" content="Acesse o Curso de Atendimento a Tentativas de Suicídio do CBMMG." />
+  <meta property="og:title" content="Acesso Restrito - Material de Apoio às Aulas de ATS" />
+  <meta property="og:description" content="Acesse o material de apoio às aulas de Atendimento a Tentativas de Suicídio do CBMMG." />
   <meta property="og:image" content="https://i.pinimg.com/736x/29/42/2a/29422ad8bed8166ef119bcef4792218f.jpg" />
   <meta property="og:url" content="https://ricmurtapsicologia.github.io/Curso-ATS/" />
   <meta property="og:type" content="website" />
 
   <link rel="icon" href="https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg" type="image/x-icon" />
 
-  <title>Acesso Restrito | Atendimento a Tentativas de Suicídio - CBMMG</title>
+  <title>Acesso Restrito | Material de Apoio às Aulas de ATS - CBMMG</title>
 
   <style>
     /* ==========================================================
-       1. TOKENS VISUAIS
+       TOKENS
        ========================================================== */
 
     :root {
-      --color-bg-0: #03060b;
-      --color-bg-1: #07101f;
-      --color-bg-2: #0b1728;
+      --bg-0: #03070d;
+      --bg-1: #07111f;
+      --bg-2: #0a1b2f;
 
-      --color-navy: #003366;
-      --color-navy-light: #07569f;
-      --color-navy-dark: #001f3f;
-      --color-gold: #ffdd00;
-      --color-white: #ffffff;
-      --color-ink: #0b1220;
-      --color-muted: #cbd5e1;
-      --color-muted-soft: rgba(255, 255, 255, 0.72);
+      --navy: #003366;
+      --navy-light: #07569f;
+      --navy-dark: #001f3f;
+      --gold: #ffdd00;
+      --white: #ffffff;
+      --ink: #0b1220;
 
-      --color-error: #ff6f61;
-      --color-success: #28a745;
+      --error: #ff6f61;
+      --success: #28a745;
 
-      --surface-stage: rgba(255, 255, 255, 0.055);
-      --surface-panel: rgba(3, 7, 14, 0.78);
-      --surface-panel-strong: rgba(3, 7, 14, 0.88);
-      --surface-input: rgba(255, 255, 255, 0.96);
+      --surface: rgba(3, 8, 16, 0.82);
+      --surface-strong: rgba(3, 8, 16, 0.92);
+      --input-surface: rgba(255, 255, 255, 0.96);
 
-      --stroke-soft: rgba(255, 255, 255, 0.11);
+      --stroke-soft: rgba(255, 255, 255, 0.10);
       --stroke-mid: rgba(255, 255, 255, 0.16);
-      --stroke-strong: rgba(255, 255, 255, 0.24);
 
-      --radius-xl: 32px;
-      --radius-lg: 24px;
+      --radius-xl: 28px;
+      --radius-lg: 22px;
       --radius-md: 16px;
       --radius-sm: 12px;
 
-      --shadow-xl: 0 34px 100px rgba(0, 0, 0, 0.58);
-      --shadow-lg: 0 22px 58px rgba(0, 0, 0, 0.44);
+      --shadow-xl: 0 30px 90px rgba(0, 0, 0, 0.54);
       --shadow-md: 0 14px 32px rgba(0, 0, 0, 0.32);
 
-      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 
-      --image-hero: url("https://i.pinimg.com/736x/29/42/2a/29422ad8bed8166ef119bcef4792218f.jpg");
-      --image-logo: url("https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg");
+      --hero-image: url("https://i.pinimg.com/736x/29/42/2a/29422ad8bed8166ef119bcef4792218f.jpg");
+      --logo-image: url("https://i.pinimg.com/originals/33/9d/0c/339d0cc2f05bbb719debe6a5efb414dd.jpg");
 
       --transition-fast: 140ms ease;
-      --transition-base: 220ms ease;
     }
 
     /* ==========================================================
-       2. RESET E BASE
+       RESET / BASE
        ========================================================== */
 
     *,
@@ -86,13 +80,12 @@
     body {
       min-height: 100vh;
       margin: 0;
-      font-family: var(--font-main);
-      color: var(--color-white);
+      font-family: var(--font);
+      color: var(--white);
       background:
-        radial-gradient(circle at 16% 12%, rgba(255, 221, 0, 0.13), transparent 26%),
-        radial-gradient(circle at 84% 20%, rgba(0, 70, 135, 0.32), transparent 30%),
-        radial-gradient(circle at 48% 88%, rgba(255, 221, 0, 0.06), transparent 32%),
-        linear-gradient(135deg, var(--color-bg-0) 0%, var(--color-bg-1) 46%, var(--color-bg-2) 100%);
+        radial-gradient(circle at 18% 12%, rgba(255, 221, 0, 0.10), transparent 24%),
+        radial-gradient(circle at 84% 18%, rgba(0, 80, 150, 0.22), transparent 28%),
+        linear-gradient(135deg, var(--bg-0) 0%, var(--bg-1) 48%, var(--bg-2) 100%);
       overflow-x: hidden;
     }
 
@@ -103,18 +96,13 @@
       z-index: -1;
       pointer-events: none;
       background:
-        linear-gradient(115deg, rgba(255, 255, 255, 0.045), transparent 34%),
-        radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.42) 82%);
+        radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.42) 84%),
+        linear-gradient(115deg, rgba(255, 255, 255, 0.035), transparent 34%);
     }
 
     button,
     input {
       font: inherit;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
     }
 
     :focus-visible {
@@ -123,20 +111,8 @@
       border-radius: 10px;
     }
 
-    .sr-only {
-      position: absolute !important;
-      width: 1px !important;
-      height: 1px !important;
-      padding: 0 !important;
-      margin: -1px !important;
-      overflow: hidden !important;
-      clip: rect(0, 0, 0, 0) !important;
-      white-space: nowrap !important;
-      border: 0 !important;
-    }
-
     /* ==========================================================
-       3. LAYOUT PRINCIPAL
+       LAYOUT
        ========================================================== */
 
     .page {
@@ -144,42 +120,38 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: clamp(18px, 4vw, 46px);
+      padding: clamp(16px, 4vw, 42px);
     }
 
     .shell {
-      width: min(1160px, 100%);
+      width: min(1080px, 100%);
       display: grid;
-      gap: 14px;
+      gap: 12px;
     }
 
     .stage {
       display: grid;
-      grid-template-columns: minmax(0, 1.12fr) minmax(380px, 0.88fr);
-      min-height: clamp(560px, 72vh, 650px);
+      grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.88fr);
       overflow: hidden;
+      min-height: clamp(500px, 68vh, 585px);
       border: 1px solid var(--stroke-soft);
       border-radius: var(--radius-xl);
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025)),
-        var(--surface-stage);
+      background: rgba(255, 255, 255, 0.045);
       box-shadow: var(--shadow-xl);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
     }
 
     /* ==========================================================
-       4. HERO
+       HERO
        ========================================================== */
 
     .hero {
       position: relative;
       min-height: 100%;
-      isolation: isolate;
       overflow: hidden;
+      isolation: isolate;
       background:
-        linear-gradient(115deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.40) 47%, rgba(0, 0, 0, 0.84) 100%),
-        var(--image-hero) center / cover no-repeat;
+        linear-gradient(105deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.42) 52%, rgba(0, 0, 0, 0.84) 100%),
+        var(--hero-image) 62% center / cover no-repeat;
     }
 
     .hero::before {
@@ -187,138 +159,84 @@
       position: absolute;
       inset: 0;
       z-index: -1;
-      background:
-        radial-gradient(circle at 30% 26%, rgba(255, 221, 0, 0.22), transparent 28%),
-        linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.74));
       pointer-events: none;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
       background:
-        linear-gradient(90deg, rgba(0, 0, 0, 0.20), transparent 52%),
-        radial-gradient(circle at center, transparent 20%, rgba(0, 0, 0, 0.42) 100%);
-      pointer-events: none;
+        radial-gradient(circle at 30% 28%, rgba(255, 221, 0, 0.18), transparent 28%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.74));
     }
 
     .hero-content {
-      position: relative;
-      z-index: 1;
       min-height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: clamp(28px, 4vw, 48px);
+      padding: clamp(26px, 4vw, 44px);
     }
 
-    .brand-mark {
-      width: fit-content;
+    .brand-line {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      color: rgba(255, 255, 255, 0.92);
+      gap: 9px;
+      width: fit-content;
+      color: rgba(255, 255, 255, 0.90);
     }
 
-    .brand-mark-icon {
-      display: grid;
-      place-items: center;
-      width: 24px;
-      height: 24px;
-      border-radius: 999px;
-      background: rgba(255, 221, 0, 0.14);
-      color: var(--color-gold);
-      box-shadow: 0 0 0 1px rgba(255, 221, 0, 0.22);
+    .brand-line svg {
+      width: 15px;
+      height: 15px;
+      color: var(--gold);
+      flex: 0 0 auto;
     }
 
-    .brand-mark-icon svg {
-      width: 14px;
-      height: 14px;
-    }
-
-    .brand-mark-text {
-      font-size: 12.5px;
+    .brand-line span {
+      font-size: 12px;
       font-weight: 850;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
     .hero-main {
-      max-width: 720px;
-      padding-top: 80px;
+      max-width: 640px;
+      padding-top: 54px;
     }
 
     .hero-kicker {
-      display: inline-block;
-      margin-bottom: 16px;
-      font-size: 13px;
+      display: block;
+      margin-bottom: 14px;
+      font-size: 12.5px;
       font-weight: 900;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
-      color: var(--color-gold);
+      color: var(--gold);
     }
 
     .hero-title {
-      max-width: 660px;
+      max-width: 600px;
       margin: 0;
-      font-size: clamp(42px, 5.25vw, 72px);
-      line-height: 0.97;
-      letter-spacing: -0.06em;
-      color: var(--color-white);
+      font-size: clamp(38px, 4.7vw, 62px);
+      line-height: 0.99;
+      letter-spacing: -0.055em;
+      color: var(--white);
       text-wrap: balance;
-      text-shadow: 0 8px 28px rgba(0, 0, 0, 0.56);
+      text-shadow: 0 7px 26px rgba(0, 0, 0, 0.54);
     }
 
     .hero-title .accent {
-      color: var(--color-gold);
+      color: var(--gold);
       font-weight: 950;
     }
 
     .hero-text {
-      max-width: 620px;
-      margin: 22px 0 0;
-      font-size: clamp(15px, 1.42vw, 18px);
-      line-height: 1.62;
-      color: rgba(255, 255, 255, 0.86);
-      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.36);
-    }
-
-    .hero-metrics {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 30px;
-      max-width: 620px;
-    }
-
-    .hero-metric {
-      min-height: 74px;
-      padding: 13px 13px 12px;
-      border: 1px solid rgba(255, 255, 255, 0.11);
-      border-radius: 16px;
-      background: rgba(0, 0, 0, 0.28);
-    }
-
-    .hero-metric strong {
-      display: block;
-      font-size: 20px;
-      line-height: 1;
-      color: var(--color-gold);
-      letter-spacing: -0.02em;
-    }
-
-    .hero-metric span {
-      display: block;
-      margin-top: 7px;
-      font-size: 12px;
-      line-height: 1.32;
-      color: rgba(255, 255, 255, 0.76);
+      max-width: 540px;
+      margin: 18px 0 0;
+      font-size: clamp(14px, 1.3vw, 16.5px);
+      line-height: 1.58;
+      color: rgba(255, 255, 255, 0.84);
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.34);
     }
 
     /* ==========================================================
-       5. LOGIN
+       LOGIN
        ========================================================== */
 
     .login-panel {
@@ -326,74 +244,62 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: clamp(26px, 4vw, 46px);
-      background:
-        linear-gradient(180deg, rgba(3, 7, 14, 0.78), rgba(3, 7, 14, 0.92)),
-        rgba(3, 7, 14, 0.82);
+      padding: clamp(28px, 4vw, 44px);
       border-left: 1px solid var(--stroke-soft);
-    }
-
-    .login-panel::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
       background:
-        radial-gradient(circle at 20% 20%, rgba(255, 221, 0, 0.06), transparent 28%),
-        radial-gradient(circle at 86% 80%, rgba(0, 84, 166, 0.16), transparent 32%);
+        radial-gradient(circle at 88% 82%, rgba(0, 80, 150, 0.14), transparent 32%),
+        linear-gradient(180deg, rgba(3, 8, 16, 0.82), rgba(3, 8, 16, 0.94));
     }
 
     .login-card {
-      position: relative;
-      z-index: 1;
       width: 100%;
-      max-width: 430px;
+      max-width: 410px;
       margin: 0 auto;
     }
 
     .login-header {
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
     .login-brand {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
-      margin-bottom: 18px;
-      color: rgba(255, 255, 255, 0.88);
+      gap: 8px;
+      margin-bottom: 16px;
+      color: rgba(255, 255, 255, 0.86);
     }
 
     .login-brand svg {
-      width: 16px;
-      height: 16px;
-      color: var(--color-gold);
+      width: 14px;
+      height: 14px;
+      color: var(--gold);
       flex: 0 0 auto;
     }
 
     .login-brand span {
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 850;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.075em;
       text-transform: uppercase;
     }
 
     .login-title {
       margin: 0;
-      font-size: clamp(31px, 3.4vw, 42px);
-      line-height: 1.04;
+      font-size: clamp(30px, 3vw, 38px);
+      line-height: 1.05;
       letter-spacing: -0.052em;
-      color: var(--color-white);
+      color: var(--white);
     }
 
     .login-title .accent {
-      color: var(--color-gold);
+      color: var(--gold);
     }
 
     .login-subtitle {
-      margin: 10px 0 0;
-      font-size: 15px;
-      line-height: 1.55;
-      color: rgba(255, 255, 255, 0.78);
+      margin: 9px 0 0;
+      font-size: 14.5px;
+      line-height: 1.52;
+      color: rgba(255, 255, 255, 0.76);
     }
 
     .course-id {
@@ -402,40 +308,36 @@
       gap: 12px;
       width: 100%;
       margin-bottom: 22px;
-      padding: 12px 0 18px;
+      padding-bottom: 18px;
       border-bottom: 1px solid var(--stroke-soft);
     }
 
     .course-logo {
-      width: 46px;
-      height: 46px;
+      width: 44px;
+      height: 44px;
       flex: 0 0 auto;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 14px;
+      border: 1px solid var(--stroke-mid);
+      border-radius: 13px;
       background:
-        var(--image-logo) center / cover no-repeat,
+        var(--logo-image) center / cover no-repeat,
         rgba(255, 255, 255, 0.06);
-      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.26);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.26);
     }
 
     .course-title {
       margin: 0;
-      font-size: 15.5px;
+      font-size: 15px;
       font-weight: 900;
       line-height: 1.25;
-      color: var(--color-white);
+      color: var(--white);
     }
 
     .course-note {
       margin: 4px 0 0;
-      font-size: 12.5px;
+      font-size: 12.3px;
       line-height: 1.35;
-      color: rgba(255, 255, 255, 0.67);
+      color: rgba(255, 255, 255, 0.66);
     }
-
-    /* ==========================================================
-       6. FORMULÁRIO
-       ========================================================== */
 
     .login-form {
       display: grid;
@@ -457,22 +359,21 @@
       width: 100%;
       min-height: 52px;
       padding: 13px 15px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: var(--radius-sm);
-      background: var(--surface-input);
-      color: var(--color-ink);
+      background: var(--input-surface);
+      color: var(--ink);
       font-size: 16px;
       line-height: 1.2;
       outline: none;
       box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
       transition:
         border-color var(--transition-fast),
-        box-shadow var(--transition-fast),
-        transform var(--transition-fast);
+        box-shadow var(--transition-fast);
     }
 
     .login-input::placeholder {
-      color: rgba(15, 23, 42, 0.44);
+      color: rgba(15, 23, 42, 0.42);
     }
 
     .login-input:focus {
@@ -491,8 +392,8 @@
     .login-help {
       margin: 0;
       font-size: 12.5px;
-      line-height: 1.45;
-      color: rgba(255, 255, 255, 0.66);
+      line-height: 1.42;
+      color: rgba(255, 255, 255, 0.64);
     }
 
     .login-button {
@@ -502,8 +403,8 @@
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: var(--radius-sm);
       background:
-        linear-gradient(180deg, var(--color-navy-light) 0%, var(--color-navy) 52%, var(--color-navy-dark) 100%);
-      color: var(--color-white);
+        linear-gradient(180deg, var(--navy-light) 0%, var(--navy) 56%, var(--navy-dark) 100%);
+      color: var(--white);
       font-weight: 950;
       letter-spacing: 0.075em;
       text-transform: uppercase;
@@ -531,16 +432,12 @@
       box-shadow: none;
     }
 
-    /* ==========================================================
-       7. MENSAGENS
-       ========================================================== */
-
     .login-message {
       display: none;
       padding: 12px;
       border: 1px solid var(--stroke-soft);
       border-radius: var(--radius-sm);
-      background: var(--surface-panel-strong);
+      background: var(--surface-strong);
       color: rgba(255, 255, 255, 0.94);
       font-size: 13.5px;
       line-height: 1.42;
@@ -575,28 +472,29 @@
     }
 
     /* ==========================================================
-       8. FOOTER
+       RODAPÉ
        ========================================================== */
 
     .page-footer {
-      padding: 0 4px;
-      color: rgba(255, 255, 255, 0.58);
+      width: 100%;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.62);
       font-size: 12px;
       line-height: 1.4;
-      text-align: right;
+      padding: 2px 8px 0;
     }
 
     /* ==========================================================
-       9. RESPONSIVIDADE
+       RESPONSIVIDADE
        ========================================================== */
 
-    @media (max-width: 1020px) {
+    @media (max-width: 980px) {
       .page {
         align-items: flex-start;
       }
 
       .shell {
-        width: min(680px, 100%);
+        width: min(620px, 100%);
       }
 
       .stage {
@@ -605,39 +503,47 @@
       }
 
       .hero {
-        min-height: 330px;
+        min-height: 210px;
+        background:
+          linear-gradient(105deg, rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0.34) 54%, rgba(0, 0, 0, 0.82) 100%),
+          var(--hero-image) center right / cover no-repeat;
       }
 
       .hero-content {
-        min-height: 330px;
+        min-height: 210px;
+        padding: 22px;
       }
 
       .hero-main {
-        padding-top: 42px;
+        padding-top: 30px;
       }
 
       .hero-title {
-        max-width: 560px;
-        font-size: clamp(36px, 9vw, 58px);
+        max-width: 430px;
+        font-size: clamp(30px, 8vw, 44px);
+      }
+
+      .hero-text {
+        max-width: 430px;
+        margin-top: 12px;
+        font-size: 13.5px;
+        line-height: 1.45;
       }
 
       .login-panel {
         border-left: 0;
         border-top: 1px solid var(--stroke-soft);
+        padding: 26px 22px 28px;
       }
 
       .login-card {
         max-width: 100%;
       }
-
-      .page-footer {
-        text-align: center;
-      }
     }
 
-    @media (max-width: 620px) {
+    @media (max-width: 560px) {
       .page {
-        padding: 14px;
+        padding: 12px;
       }
 
       .stage {
@@ -645,41 +551,42 @@
       }
 
       .hero {
-        min-height: 245px;
+        min-height: 150px;
       }
 
       .hero-content {
-        min-height: 245px;
-        padding: 20px;
+        min-height: 150px;
+        justify-content: flex-end;
+        padding: 18px;
       }
 
-      .brand-mark-text,
-      .login-brand span {
-        font-size: 11px;
+      .brand-line {
+        position: absolute;
+        top: 16px;
+        left: 18px;
+      }
+
+      .brand-line span {
+        font-size: 10.5px;
       }
 
       .hero-main {
-        padding-top: 26px;
+        padding-top: 0;
       }
 
       .hero-kicker {
-        margin-bottom: 10px;
-        font-size: 11px;
-        letter-spacing: 0.12em;
+        margin-bottom: 6px;
+        font-size: 10.5px;
+        letter-spacing: 0.11em;
       }
 
       .hero-title {
-        font-size: clamp(32px, 12vw, 46px);
-        line-height: 0.99;
+        max-width: 320px;
+        font-size: clamp(25px, 8.5vw, 32px);
+        line-height: 1.02;
       }
 
       .hero-text {
-        margin-top: 14px;
-        font-size: 13.5px;
-        line-height: 1.48;
-      }
-
-      .hero-metrics {
         display: none;
       }
 
@@ -688,38 +595,84 @@
       }
 
       .login-header {
-        margin-bottom: 20px;
+        margin-bottom: 18px;
+      }
+
+      .login-brand {
+        margin-bottom: 12px;
+      }
+
+      .login-brand span {
+        font-size: 10.8px;
       }
 
       .login-title {
-        font-size: 32px;
+        font-size: 31px;
+      }
+
+      .login-subtitle {
+        font-size: 14px;
       }
 
       .course-id {
         align-items: flex-start;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
       }
 
       .course-logo {
-        width: 42px;
-        height: 42px;
+        width: 40px;
+        height: 40px;
+      }
+
+      .course-title {
+        font-size: 14.2px;
+      }
+
+      .course-note {
+        font-size: 12px;
+      }
+
+      .login-input,
+      .login-button {
+        min-height: 50px;
+      }
+
+      .page-footer {
+        font-size: 11.5px;
+        padding-top: 0;
       }
     }
 
-    @media (max-width: 390px) {
-      .login-title {
-        font-size: 30px;
+    @media (max-width: 380px) {
+      .page {
+        padding: 9px;
+      }
+
+      .hero {
+        min-height: 138px;
+      }
+
+      .hero-content {
+        min-height: 138px;
+        padding: 16px;
+      }
+
+      .brand-line {
+        top: 14px;
+        left: 16px;
       }
 
       .hero-title {
-        font-size: 34px;
-      }
-
-      .page {
-        padding: 10px;
+        font-size: 26px;
       }
 
       .login-panel {
-        padding-inline: 16px;
+        padding: 20px 16px 22px;
+      }
+
+      .login-title {
+        font-size: 29px;
       }
     }
 
@@ -739,44 +692,25 @@
   <main class="page" aria-labelledby="pageTitle">
     <div class="shell">
       <div class="stage">
-        <section class="hero" aria-label="Capa institucional do curso">
+        <section class="hero" aria-label="Capa institucional do material de apoio às aulas de ATS">
           <div class="hero-content">
-            <div class="brand-mark" aria-label="Identificação institucional">
-              <span class="brand-mark-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path fill="currentColor" d="M12 2l2.2 6.8H21l-5.5 4 2.1 6.7L12 15.7 6.4 19.5 8.5 12.8 3 8.8h6.8z" />
-                </svg>
-              </span>
-              <span class="brand-mark-text">CBMMG • Conteúdo institucional</span>
+            <div class="brand-line" aria-label="Identificação institucional">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M12 2l2.2 6.8H21l-5.5 4 2.1 6.7L12 15.7 6.4 19.5 8.5 12.8 3 8.8h6.8z" />
+              </svg>
+              <span>CBMMG • Conteúdo institucional</span>
             </div>
 
             <div class="hero-main">
-              <span class="hero-kicker">Curso EAD • Acesso restrito</span>
+              <span class="hero-kicker">Material de apoio às aulas de ATS</span>
 
               <h1 class="hero-title" id="pageTitle">
                 Atendimento a Tentativas de <span class="accent">Suicídio</span>
               </h1>
 
               <p class="hero-text">
-                Ambiente institucional de apoio à formação técnica em atendimento, comunicação e manejo inicial de ocorrências críticas.
+                Acesso restrito a militares cadastrados para consulta ao material de apoio às aulas.
               </p>
-
-              <div class="hero-metrics" aria-label="Resumo institucional do ambiente">
-                <div class="hero-metric">
-                  <strong>ATS</strong>
-                  <span>Capacitação técnica</span>
-                </div>
-
-                <div class="hero-metric">
-                  <strong>EAD</strong>
-                  <span>Ambiente virtual</span>
-                </div>
-
-                <div class="hero-metric">
-                  <strong>CBMMG</strong>
-                  <span>Conteúdo institucional</span>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -784,15 +718,15 @@
         <section class="login-panel" aria-label="Área de acesso restrito">
           <article class="login-card">
             <header class="login-header">
-              <div class="login-brand" aria-label="Curso institucional CBMMG">
+              <div class="login-brand" aria-label="Material institucional CBMMG">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path fill="currentColor" d="M12 2l2.2 6.8H21l-5.5 4 2.1 6.7L12 15.7 6.4 19.5 8.5 12.8 3 8.8h6.8z" />
                 </svg>
-                <span>CBMMG • Curso institucional</span>
+                <span>Material de apoio às aulas de ATS</span>
               </div>
 
               <h2 class="login-title">Acesso <span class="accent">restrito</span></h2>
-              <p class="login-subtitle">Informe sua matrícula para acessar o ambiente do curso.</p>
+              <p class="login-subtitle">Informe sua matrícula para acessar o material de apoio às aulas.</p>
             </header>
 
             <div class="course-id">
@@ -1097,7 +1031,7 @@
         }
 
         if (AUTHORIZED_REGISTRATIONS.has(registration)) {
-          showMessage("Acesso autorizado. Redirecionando para o curso.", "success");
+          showMessage("Acesso autorizado. Redirecionando.", "success");
           clearAttemptState();
           setControlsLocked(true);
 
