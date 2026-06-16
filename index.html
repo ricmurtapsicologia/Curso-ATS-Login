@@ -82,10 +82,7 @@
       margin: 0;
       font-family: var(--font);
       color: var(--white);
-      background:
-        radial-gradient(circle at 18% 12%, rgba(255, 221, 0, 0.10), transparent 24%),
-        radial-gradient(circle at 84% 18%, rgba(0, 80, 150, 0.22), transparent 28%),
-        linear-gradient(135deg, var(--bg-0) 0%, var(--bg-1) 48%, var(--bg-2) 100%);
+      background: var(--bg-1);
       overflow-x: hidden;
     }
 button,
@@ -124,7 +121,7 @@ button,
       min-height: clamp(500px, 68vh, 585px);
       border: 1px solid var(--stroke-soft);
       border-radius: var(--radius-xl);
-      background: rgba(255, 255, 255, 0.045);
+      background: transparent;
       box-shadow: var(--shadow-xl);
     }
 
@@ -136,9 +133,7 @@ button,
       position: relative;
       min-height: 100%;
       overflow: hidden;
-      background:
-        linear-gradient(105deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.42) 52%, rgba(0, 0, 0, 0.84) 100%),
-        var(--hero-image) 62% center / cover no-repeat;
+      background: var(--hero-image) 62% center / cover no-repeat;
     }
 .hero-content {
       min-height: 100%;
@@ -221,9 +216,7 @@ button,
       justify-content: center;
       padding: clamp(28px, 4vw, 44px);
       border-left: 1px solid var(--stroke-soft);
-      background:
-        radial-gradient(circle at 88% 82%, rgba(0, 80, 150, 0.14), transparent 32%),
-        linear-gradient(180deg, rgba(3, 8, 16, 0.82), rgba(3, 8, 16, 0.94));
+      background: rgba(3, 8, 16, 0.94);
     }
 
     .login-card {
@@ -479,9 +472,7 @@ button,
 
       .hero {
         min-height: 210px;
-        background:
-          linear-gradient(105deg, rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0.34) 54%, rgba(0, 0, 0, 0.82) 100%),
-          var(--hero-image) center right / cover no-repeat;
+        background: var(--hero-image) center right / cover no-repeat;
       }
 
       .hero-content {
@@ -902,6 +893,7 @@ button,
         animation: none !important;
       }
     }
+  
   
   </style>
 </head>
