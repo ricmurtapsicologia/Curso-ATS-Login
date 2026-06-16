@@ -88,19 +88,7 @@
         linear-gradient(135deg, var(--bg-0) 0%, var(--bg-1) 48%, var(--bg-2) 100%);
       overflow-x: hidden;
     }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      background:
-        radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.42) 84%),
-        linear-gradient(115deg, rgba(255, 255, 255, 0.035), transparent 34%);
-    }
-
-    button,
+button,
     input {
       font: inherit;
     }
@@ -148,24 +136,11 @@
       position: relative;
       min-height: 100%;
       overflow: hidden;
-      isolation: isolate;
       background:
         linear-gradient(105deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.42) 52%, rgba(0, 0, 0, 0.84) 100%),
         var(--hero-image) 62% center / cover no-repeat;
     }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      background:
-        radial-gradient(circle at 30% 28%, rgba(255, 221, 0, 0.18), transparent 28%),
-        linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.74));
-    }
-
-    .hero-content {
+.hero-content {
       min-height: 100%;
       display: flex;
       flex-direction: column;
@@ -927,6 +902,7 @@
         animation: none !important;
       }
     }
+  
   </style>
 </head>
 
